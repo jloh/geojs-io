@@ -1,0 +1,91 @@
+baseurl = "https://geojs.io"
+languageCode = "en-us"
+title = "GeoJS · REST/JSON/JSONP GeoIP API"
+theme = "hugo-material-docs"
+metadataformat = "yaml"
+canonifyurls = true
+# Enable Google Analytics by entering your tracking id
+googleAnalytics = "UA-92272378-1"
+# Build a robots.txt
+enableRobotsTXT = true
+
+[params]
+	# General information
+	author = "jloh"
+	description = "A rest API"
+	#copyright = "Released under the MIT license"
+	copyright = "James Loh"
+
+	# Enable highlightjs
+	highlight_js = true
+
+	# Repository
+	provider = "Personal"
+	#repo_url = "https://github.com/digitalcraftsman/hugo-material-docs"
+
+	#version = "1.0.0"
+	#logo = "images/logo.png"
+	favicon = ""
+
+	permalink = "#"
+
+	# Custom assets
+	custom_css = []
+	custom_js  = []
+
+	# Syntax highlighting theme
+	highlight_css  = ""
+
+	[params.palette]
+		primary = "red"
+		accent  = "light-blue"
+		#primary = "indigo"
+		#accent  = "grey"
+
+
+	[params.font]
+		text = "Ubuntu"
+		code = "Ubuntu Mono"
+
+
+[social]
+	twitter = "itsjloh"
+	github  = "jloh"
+	email   = "contact@geojs.io"
+
+
+[[menu.main]]
+	name   = "Home"
+	url    = "/"
+	weight = 1
+
+[[menu.main]]
+	name   = "Demo"
+	url    = "demo/"
+	weight = 10
+
+[[menu.main]]
+	name   = "Docs"
+	url    = "docs/"
+	weight = 5
+
+[[menu.main]]
+	name   = "Blog"
+	url    = "https://jloh.co/tag/geojs/"
+	weight = 15
+
+[[menu.main]]
+	name   = "Support"
+	url    = "https://meta.jloh.co/c/geojs/support"
+	weight = 20
+
+[[menu.main]]
+	name   = "System Status"
+	url    = "http://status.geojs.io"
+	weight = 25
+
+[blackfriday]
+	smartypants	= true
+	fractions = true
+	smartDashes = true
+	plainIDAnchors = true
