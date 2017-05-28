@@ -1,0 +1,18 @@
+<h3>{{ .name }}</h3>
+
+
+<p>Allowed methods: <code>{{ delimit .methods ", " }}</code><br />
+Default JSONP response: <code>{{ .default_jsonp }}</code></p>
+
+<p>{{ .description }}</p>
+
+{{ range .responses }}
+<h4>{{ .name }}</h4>
+
+<p>URL: <code>{{ delimit .urls "</code> / <code>" }}</code></p>
+
+<p>Example response:</p>
+
+<pre><code>{{ .example }}</code></pre>
+
+{{ end }}
