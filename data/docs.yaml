@@ -36,25 +36,32 @@ docs:
       responses:
         - name: 'Plain text'
           urls:
-            - 'https://get.geojs.io/v1/ip/country'
-            - 'https://get.geojs.io/v1/ip/country/full'
+            - 'https://get.geojs.io/v1/ip/country{?ip=192.168.0.1,192.168.0.2}'
+            - 'https://get.geojs.io/v1/ip/country/full{?ip=192.168.0.1,192.168.0.2}'
             - 'https://get.geojs.io/v1/ip/country/{ip address}'
             - "https://get.geojs.io/v1/ip/country/full/{ip address}"
           example: |
                   curl -s https://get.geojs.io/v1/ip/country
                   AU
 
+                  curl -s https://get.geojs.io/v1/ip/country/198.41.215.162
+                  US
+                  
+                  curl -s https://get.geojs.io/v1/ip/country?ip=198.41.215.162,198.41.215.165
+                  198.41.215.162: US
+                  198.41.215.165: US
+
                   curl -s https://get.geojs.io/v1/ip/country/full
                   Australia
 
-                  curl -s https://get.geojs.io/v1/ip/country/198.41.215.162
-                  US
-
                   curl -s https://get.geojs.io/v1/ip/country/full/198.41.215.162
                   United States
+
+                  curl -s https://get.geojs.io/v1/ip/country/full?ip=198.41.215.162
+                  198.41.215.162: United States
         - name: 'JSON'
           urls:
-            - 'https://get.geojs.io/v1/ip/country.json'
+            - 'https://get.geojs.io/v1/ip/country.json{?ip=192.168.0.1,192.168.0.2}'
             - 'https://get.geojs.io/v1/ip/country/{ip address}.json'
           example: |
                   curl -s https://get.geojs.io/v1/ip/country.json

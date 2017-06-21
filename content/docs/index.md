@@ -12,6 +12,6 @@ There are also IPv6 and IPv4 only endpoints on https://ipv6.geojs.io/ and https:
 
 ## Formats
 
-All endpoints either have a JSON or JavaScript/JSONP format available. The IP and Country based endpoints also have a plain text version available.
+All endpoints either have a JSON or JavaScript/JSONP format available. The IP and Country based endpoints also have a plain text version available. Each endpoint where you can specify an IP for lookup also tags the IPs are args.
 
 ## End Points
