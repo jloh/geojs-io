@@ -1,4 +1,4 @@
-baseurl = "https://insurance-saleman-zebra-21007.netlify.com"
+baseurl = "https://geojs.io"
 languageCode = "en-AU"
 title = "GeoJS · REST/JSON/JSONP GeoIP API"
 theme = "kube"
