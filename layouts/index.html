@@ -1,56 +1,71 @@
-{{ partial "head" . }}
+{{ define "title"}} {{ .Site.Title}} {{end}}
+{{ define "header"}} {{ partial "header" .}} {{end}}
+{{ define "main"}}
 
-{{ if (eq (trim .Site.Params.provider " " | lower) "github") | and (isset .Site.Params "repo_url") }}
-	{{ $repo_id := replace .Site.Params.repo_url "https://github.com/" ""}}
-	{{ .Scratch.Set "repo_id" $repo_id }}
-{{ end }}
+<div id="main">
+  <div id="hero">
+    <h1>{{.Title}}</h1>
+    <p>{{.Description}}</p>
+  </div>
+  <div id="intro row align-middle">
+    <div class="col push-center col-10 text-center">
+      <p>
+      GeoJS is a highly available REST/JSON/JSONP IP Geolocation lookup API. It offers websites the ability to get a visitors IP address and query additional location information without rate limits (yet!), free for use no matter your platform.
+      </br>
+      </br>
+      With sub second response times and multiple locations around the globe you can throw as much traffic as you like at us.
+      </p>
+    </div>
+  </div>
+  <div id="kube-features">
+    <div class="row gutters">
+      <div class="col col-4 item">
+        <h4>Zero Rate Limits</h4>
+        <p>GeoJS currently has zero rate limits in place and doesn't currently see the need to add any in the future.</p>
+      </div>
+      <div class="col col-4 item">
+        <h4>CORS</h4>
+        <p>Sending wide open CORS headers GeoJS can be used on any platform or website.
+      </div>
+      <div class="col col-4 item">
+        <h4>And more...</h4>
+        <ul class="unstyled">
+          <li>Highly available</li>
+          <li>HTTPS only</li>
+          <li>IPv4 and IPv6</li>
+         </ul>
+      </div>
+    </div>
+  </div>
+  <div id="row align-middle" style="padding-bottom: 32px; margin-bottom: 64px; border-bottom: 1px dashed rgba(0, 0, 0, 0.15);">
+    <div class="col push-center col-10 text-center">
+      <p>Checkout our <a href="/docs" title="GeoJS Documentation">docs</a> to get started, our <a href="https://jloh.co/tag/geojs/" title="GeoJS blog posts">blog posts</a> about GeoJS or a neat little demo down below.</p>
+    </div>
+  </div>
+  <div id="intro row align-middle">
+    <div class="col push-center col-10 text-center">
+      <h2>Demo</h2>
+      <div class="col push-center col-10 text-center">
+        <p>Time for a quick demo using a tiny bit of jQuery.
+        <blockquote>Hey <span id="user_ip"></span>. The IP you&rsquo;re behind has a country code of <span id="user_countrycode"></span>!</blockquote></p>
 
-<div class="backdrop">
-	<div class="backdrop-paper"></div>
+        <script type="application/javascript">
+            function geoip(json){
+                var userip      = document.getElementById("user_ip");
+                var countrycode = document.getElementById("user_countrycode");
+                userip.textContent      = json.ip;
+                countrycode.textContent = json.country_code;
+            }
+        </script>
+        <script src="https://get.geojs.io/v1/ip/geo.js"></script>
+
+        <p>Which is build using this little bit of code:</p>
+
+{{.Content }}
+      </div>
+    </div>
+  </div>
 </div>
-
-<input class="toggle" type="checkbox" id="toggle-drawer">
-<input class="toggle" type="checkbox" id="toggle-search">
-<label class="toggle-button overlay" for="toggle-drawer"></label>
-
-<header class="header">
-	{{ partial "header" . }}
-</header>
-
-<main class="main">
-	<div class="drawer">
-		{{ partial "drawer" . }}
-	</div>
-
-	<article class="article">
-		<div class="wrapper">
-			{{ range where .Site.Pages "Type" "index" }}
-				<h1>{{ .Title }} {{ if .IsDraft }} (Draft){{ end }}</h1>
-
-				{{ .Content }}
-			{{ end }}
-
-			<aside class="copyright" role="note">
-				{{ with .Site.Params.copyright }}
-				&copy; {{ $.Now.Format "2006" }} {{ . }} &ndash;
-				{{ end }}
-				Documentation built with
-				<a href="https://www.gohugo.io" target="_blank">Hugo</a>
-				using the
-				<a href="http://github.com/digitalcraftsman/hugo-material-docs" target="_blank">Material</a> theme.
-			</aside>
-
-		</div>
-	</article>
-
-	<div class="results" role="status" aria-live="polite">
-		<div class="scrollable">
-			<div class="wrapper">
-				<div class="meta"></div>
-				<div class="list"></div>
-			</div>
-		</div>
-	</div>
-</main>
-
-{{ partial "footer_js" . }}
+</div>
+{{ end }}
+{{ define "footer"}} {{ partial "footer" .}} {{end}}

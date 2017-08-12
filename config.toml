@@ -1,91 +1,62 @@
-baseurl = "https://geojs.io"
-languageCode = "en-us"
+baseurl = "https://insurance-saleman-zebra-21007.netlify.com"
+languageCode = "en-AU"
 title = "GeoJS · REST/JSON/JSONP GeoIP API"
-theme = "hugo-material-docs"
+theme = "kube"
 metadataformat = "yaml"
 canonifyurls = true
 # Enable Google Analytics by entering your tracking id
 googleAnalytics = "UA-92272378-1"
 # Build a robots.txt
 enableRobotsTXT = true
+# Don't do alias assets since Netlify handles that for us
+disableAliases = true
+
+description = "GeoJS is a highly available REST/JSON/JSONP IP Geolocation lookup API"
+
+# Code higlighting settings
+pygmentsCodefences = true
+pygmentsCodeFencesGuesSsyntax = false
+pygmentsOptions = ""
+pygmentsStyle = "paraiso-light"
+# The monokai stylesheet is included in the base template.
+#pygmentsUseClasses = true
 
 [params]
-	# General information
-	author = "jloh"
-	description = "A rest API"
-	#copyright = "Released under the MIT license"
-	copyright = "James Loh"
-
-	# Enable highlightjs
-	highlight_js = true
-
-	# Repository
-	provider = "Personal"
-	#repo_url = "https://github.com/digitalcraftsman/hugo-material-docs"
-
-	#version = "1.0.0"
-	#logo = "images/logo.png"
-	favicon = ""
-
-	permalink = "#"
-
-	# Custom assets
-	custom_css = []
-	custom_js  = []
-
-	# Syntax highlighting theme
-	highlight_css  = ""
-
-	[params.palette]
-		primary = "red"
-		accent  = "light-blue"
-		#primary = "indigo"
-		#accent  = "grey"
-
-
-	[params.font]
-		text = "Ubuntu"
-		code = "Ubuntu Mono"
-
-
-[social]
-	twitter = "itsjloh"
-	github  = "jloh"
-	email   = "support@geojs.io"
-
+RSSLink = "/index.xml"
+author  = "jloh"
+github  = "jloh"
+twitter = "itsjloh"
+email   = "contact@geojs.io"
 
 [[menu.main]]
-	name   = "Home"
-	url    = "/"
-	weight = 1
-
+    name = "Docs"
+    weight = -100
+    url = "/docs/"
 [[menu.main]]
-	name   = "Demo"
-	url    = "demo/"
-	weight = 10
+    name = "Blog"
+    weight = -90
+    url = "https://jloh.co/tag/geojs/"
+##[[menu.main]]
+##    name = "Live"
+##    weight = -100
+##    url = "/live/"
 
-[[menu.main]]
-	name   = "Docs"
-	url    = "docs/"
-	weight = 5
+[outputs]
+home = [ "HTML", "RSS", "REDIR", "HEADERS" ]
 
-[[menu.main]]
-	name   = "Blog"
-	url    = "https://jloh.co/tag/geojs/"
-	weight = 15
+[mediaTypes]
+[mediaTypes."text/netlify"]
+suffix = ""
+delimiter = ""
 
-[[menu.main]]
-	name   = "Support"
-	url    = "https://meta.jloh.co/c/geojs/support"
-	weight = 20
-
-[[menu.main]]
-	name   = "System Status"
-	url    = "http://status.geojs.io"
-	weight = 25
-
-[blackfriday]
-	smartypants	= true
-	fractions = true
-	smartDashes = true
-	plainIDAnchors = true
+[outputFormats]
+[outputFormats.REDIR]
+mediatype = "text/netlify"
+baseName = "_redirects"
+isPlainText = true
+notAlternative = true
+[outputFormats.HEADERS]
+mediatype = "text/netlify"
+baseName = "_headers"
+isPlainText = true
+notAlternative = true
