@@ -4,6 +4,7 @@
   X-Content-Type-Options: nosniff
   X-Made-By: @itsjloh
   Referrer-Policy: origin-when-cross-origin
+
 */
   Link: </js{{ index .Site.Data.js.hash "main.js" | relURL }}>; rel=preload; as=script
   Link: </css{{ index .Site.Data.css.hash "main.css" | relURL }}>; rel=preload; as=style
