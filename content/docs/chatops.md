@@ -18,7 +18,7 @@ The HipChat integration can be installed by using a Integration URL. Our Integra
 
 ### Usage
 
-After installation, you can use the integration by using the IP slash command. For example `/ip 8.8.8.8`.
+After installation, you can use the integration by using the IP slash command. For example `/geojs 8.8.8.8`.
 
 ## Twist
 
