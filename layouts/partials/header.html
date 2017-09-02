@@ -15,7 +15,6 @@
        {{ range .Site.Menus.main }}
     <li><a href="{{ .URL }}" {{if  $currentPage.IsMenuCurrent "main" . }} class="active"{{end}}>{{ .Name }}</a></li>
     {{end}}
-        <li id="hw-changelog"></li>
       </ul>
     </nav>
   </div>
