@@ -28,7 +28,7 @@ gulp.task('css-compress', function () {
   gulp.src([
     'themes/kube/static/css/font.css',
     'themes/kube/static/css/kube.css',
-    'themes/kube/static/css/master.css'
+    'src/css/master.css'
   ])
   .pipe(concatCSS("main.css"))
   .pipe(cleancss())
