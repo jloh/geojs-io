@@ -1129,12 +1129,17 @@ tr.border-none td {
 
 /* Customisations */
 #HW_badge_cont {
-  float: right;
+  float: left;
   position: relative;
-  top: 50%;
   transform: translateY(-10%);
-  height: 25px !important;
 }
-#top #top-brand {
-  margin-right: 5px;
+#HW_badge_cont:after {
+  content: "Changelog";
+  color: rgba(0,0,0,.65);
+  position: absolute;
+  left: 30px;
+  line-height: 32px;
+}
+#hw-changelog {
+  margin-left: 0px !important;
 }
