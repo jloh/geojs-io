@@ -94,12 +94,12 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     margin: 0; }
   #top #top-nav-main {
-    padding-left: 52px;
+    padding-left: 15px;
     border-left: 1px solid rgba(0, 0, 0, 0.15); }
     #top #top-nav-main li {
       font-size: 16px;
       font-weight: 500;
-      margin-right: 40px; }
+      margin-right: 15px; }
     #top #top-nav-main a {
       display: inline-block; }
     #top #top-nav-main a {
@@ -1133,6 +1133,7 @@ tr.border-none td {
   position: relative;
   top: 50%;
   transform: translateY(-10%);
+  height: 25px !important;
 }
 #top #top-brand {
   margin-right: 5px;
