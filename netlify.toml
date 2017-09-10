@@ -4,4 +4,4 @@
 
 [context.deploy-preview.environment]
   HUGO_VERSION = "0.26"
-  HUGO_BASEURL = $DEPLOY_PRIME_URL
+  HUGO_BASEURL = "https://deploy-preview-1--geojs.netlify.com"

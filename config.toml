@@ -1,7 +1,6 @@
 baseurl = "https://geojs.io"
 languageCode = "en-AU"
 title = "GeoJS · REST/JSON/JSONP GeoIP API"
-theme = "kube"
 metadataformat = "yaml"
 canonifyurls = true
 # Enable Google Analytics by entering your tracking id
@@ -10,6 +9,9 @@ googleAnalytics = "UA-92272378-1"
 enableRobotsTXT = true
 # Don't do alias assets since Netlify handles that for us
 disableAliases = true
+
+# Enable gitinfo
+enableGitInfo = true
 
 description = "GeoJS is a highly available REST/JSON/JSONP IP Geolocation lookup API"
 
@@ -27,6 +29,7 @@ author  = "jloh"
 github  = "jloh"
 twitter = "itsjloh"
 email   = "contact@geojs.io"
+repo    = "https://github.com/jloh/geojs-io"
 
 [[menu.main]]
     name = "Docs"
@@ -42,7 +45,7 @@ email   = "contact@geojs.io"
 ##    url = "/live/"
 
 [outputs]
-home = [ "HTML", "RSS", "REDIR", "HEADERS" ]
+home = [ "HTML", "RSS", "REDIRECTS", "HEADERS" ]
 
 [mediaTypes]
 [mediaTypes."text/netlify"]
@@ -50,7 +53,7 @@ suffix = ""
 delimiter = ""
 
 [outputFormats]
-[outputFormats.REDIR]
+[outputFormats.REDIRECTS]
 mediatype = "text/netlify"
 baseName = "_redirects"
 isPlainText = true

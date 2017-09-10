@@ -1,0 +1,33 @@
+{{ define "main" }}
+        <header id="header" class="header">
+            <div class="container">
+                <div class="branding">
+                    <h1 class="logo">
+                        <a href="/">
+                            <span aria-hidden="true" class="icon_documents_alt icon"></span>
+                            <span class="text-highlight">Geo</span><span class="text-bold">JS</span>
+                        </a>
+                        <span class="hw-changelog hw-changelog-page"></span>
+                    </h1>
+                </div><!--//branding-->
+                <ol class="breadcrumb">
+                  {{ template "breadcrumb" dict "currentPage" .Page "id" .UniqueID }}
+                </ol>
+            </div><!--//container-->
+        </header><!--//header-->
+        <div class="doc-wrapper">
+            <div class="container">
+                <div id="doc-header" class="doc-header text-center">
+                    <h1 class="doc-title"><i class="icon fa fa-{{ if .Params.icon }}{{ .Params.icon }}{{ else }}paper-plane{{ end }}"></i> {{ .Title }}</h1>
+		    <div class="meta"><i class="fa fa-clock-o"></i> Last updated: {{ .Lastmod.Format "Jan 2, 2006" }} {{ with .GitInfo }} <a href="{{ $.Site.Params.repo }}/commit/{{ .Hash }}" title="{{ .Subject }}" taget="_blank"><i class="fa fa-github-alt"></i></a>{{ end }} <a href="{{ $.Site.Params.repo }}/blob/master/content/{{ .File.Path }}" title="Edit this page" taget="_blank"><i class="fa fa-pencil"></i></a></div>
+                </div><!--//doc-header-->
+                <div class="doc-body">
+                    <div class="doc-content">
+                        <div class="content-inner">
+                          {{ .Content }}
+                        </div><!--//content-inner-->
+                    </div><!--//doc-content-->
+                </div><!--//doc-body-->              
+            </div><!--//container-->
+        </div><!--//doc-wrapper-->
+{{ end }}
