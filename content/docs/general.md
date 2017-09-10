@@ -5,6 +5,7 @@ weight: 100
 draft: false
 bref: "Service wide information"
 toc: false
+card_colour: blue
 ---
 
 ## Domains
@@ -19,4 +20,4 @@ As it currently stands GeoJS has no rate limits and doesn't require any to be im
 
 ## Endpoints
 
-Currently GeoJS only has our [IP endpoint](/docs/ip/) and our [ChatOps](/docs/chatops/) integration.
+Currently GeoJS only has our [IP endpoint](/docs/v1/endpoints/) and our [ChatOps](/docs/v1/chatops/) integration.

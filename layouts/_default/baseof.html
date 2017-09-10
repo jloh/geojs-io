@@ -1,51 +1,65 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
-
+{{ `<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->` | safeHTML }}  
+{{ `<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->` | safeHTML }}  
+{{ `<!--[if !IE]>  <html lang="en"> <![endif]-->` | safeHTML }}  
 <head>
-  {{ .Hugo.Generator }}
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ block "title" . }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+    <title>{{ block "title" . }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{ partial "head/meta" . }}
+    <link rel="canonical" href="{{ .Permalink }}"> {{ if (isset .Params "prev") }}
+    <link rel="prev" href="{{ .Params.prev }}"> {{ end }} {{ if (isset .Params "next") }}
+    <link rel="next" href="{{ .Params.next }}"> {{ end }}
 
-  {{ with .Description }}
-  <meta name="description" content="{{ . }}"> {{ end }}
-  <!-- noindex meta -->
-  {{ $default_noindex_kinds := slice "section" "taxonomy" "taxonomyTerm" }}
-  {{ $noindex_kinds := .Site.Params.noindex_kinds | default $default_noindex_kinds }}
-  {{ $is_noindex_true := and (isset .Params "noindex") .Params.noindex }}
-  {{ if or (in $noindex_kinds .Kind) ($is_noindex_true) }}
-  <meta name="robots" content="noindex">
-  {{ end }}
+    {{ template "_internal/opengraph.html" . }}
 
-    {{ partial "meta/name-author" . }}
-  {{ template "_internal/opengraph.html" . }}
-  {{ partial "meta/ogimage" . }}
-  <!-- Site verification -->
-  {{ if .IsHome }} {{ partial "site-verification" . }} {{ end }}
-  <!-- add googleAnalytics in config.toml -->
-  {{ template "_internal/google_analytics_async.html" . }}
-  {{ if .RSSLink }}
-  <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" /> {{ end }}
+    {{ partialCached "head/favicon" . }}
+    {{ partialCached "head/css" . }}
+</head> 
 
-  <link rel="canonical" href="{{ .Permalink }}"> {{ if (isset .Params "prev") }}
-  <link rel="prev" href="{{ .Params.prev }}"> {{ end }} {{ if (isset .Params "next") }}
-  <link rel="next" href="{{ .Params.next }}"> {{ end }}
-
-  {{ partial "favicon" . }}
-
-  <link href="/css/{{ index .Site.Data.css.hash "main.css" }}" rel="stylesheet" type="text/css">
-
-</head>
-
-
-<body class="page-kube">
-  <header>{{ block "header" . }}{{ end }}</header>
-  <main>{{ block "main" . }}{{ end }}</main>
-  <footer>{{ block "footer" . }}{{ end }}</footer>
-
-  <!-- js -->
-  <script src="/js/{{ index .Site.Data.js.hash "main.js" }}" type="text/javascript"></script>
+<body class="{{ if .IsHome }}landing-page{{ end }} body-blue">   
+    
+    <div class="page-wrapper">
+    {{ block "main" . }}
+    {{ end }}
+    </div><!--//page-wrapper-->
+    {{ partialCached "footer.html" . }}
+    <!-- Main Javascript -->          
+    <script type="text/javascript" src="/plugins/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="/plugins/bootstrap/js/bootstrap.min.js"></script>                                                                     
+    <script type="text/javascript" src="/plugins/jquery-match-height/jquery.matchHeight-min.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+    <!-- Headway App -->
+    <script>
+      var HW_config = {
+        selector: ".hw-changelog", // CSS selector where to inject the badge
+        account:  "76zaR7"
+      }
+    </script>
+    <script async src="//cdn.headwayapp.co/widget.js"></script>
+    {{ if .IsHome}}
+    <script type="application/javascript">
+        function geoip(json){
+            var userip      = document.getElementById("user_ip");
+            var countrycode = document.getElementById("user_countrycode");
+            userip.textContent      = json.ip;
+            countrycode.textContent = json.country_code;
+        }
+    </script>
+    <script src="https://get.geojs.io/v1/ip/geo.js"></script>
+    {{ end }}
 </body>
-
 </html>
+<!-- https://discourse.gohugo.io/t/implementing-breadcrumb-navigation-in-hugo/1048/38 -->
+{{ define "breadcrumb" }}
+  {{ if .currentPage.Parent }}
+    {{ template "breadcrumb" dict "currentPage" .currentPage.Parent }}
+  {{ end }}
+  {{ if eq .id .currentPage.UniqueID }}
+    <li class="active">{{ if .currentPage.Params.short_title }}{{.currentPage.Params.short_title }}{{ else }}{{ .currentPage.Title }}{{ end }}</li>
+  {{ else }}
+    <li><a href="{{ .currentPage.URL }}">{{ if .currentPage.IsHome }}Home{{ else }}{{ if .currentPage.Params.short_title }}{{.currentPage.Params.short_title }}{{ else }}{{ .currentPage.Title }}{{ end }}{{ end }}</a></li>
+  {{ end }}
+{{ end }}
