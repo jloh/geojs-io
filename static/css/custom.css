@@ -1,0 +1,27 @@
+.text-center .HW_visible {
+    right: -8px;
+}
+.hw-changelog {
+    display: inline-block;
+}
+.hw-changelog-page {
+    height: 25px;
+}
+.hw-changelog-page .HW_visible {
+    right: 8px;
+}
+/*.HW_visible {
+    left: -5px;
+}
+/*.hw-changelog:after {
+    content: "Changelog";
+    display: inline;
+    position: relative;
+    left: 28px;
+}
+#HW_badge_cont {
+    top: 25px;
+} */
+body {
+    background: #f9f9fb;
+}
