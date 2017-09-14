@@ -21,7 +21,18 @@ The HipChat integration can be installed by using a Integration URL. Our Integra
 
 ### Usage
 
-After installation, you can use the integration by using the IP slash command. For example `/geojs 8.8.8.8`.
+After installation, you can use the integration by using the GeoJS slash command. For example `/geojs 8.8.8.8`.
+
+<div class="row">
+  <div class="screenshot-holder col-xs-6 col-md-3">
+    <a href="/img/chatops/hipchat_app_example.png" data-title="HipChat Example" data-toggle="lightbox">
+      <img class="img-responsive" src="/img/chatops/hipchat_app_example_thumb.png" alt="screenshot">
+    </a>
+    <a class="mask" href="/img/chatops/hipchat_app_example.png" data-title="HipChat Example" data-toggle="lightbox">
+      <i class="icon fa fa-search-plus"></i>
+    </a>
+  </div>
+</div>
 
 ## Twist App
 
@@ -31,15 +42,17 @@ Twist makes it super easy to install our integration. You can find it in [their 
 
 ### Usage
 
-You can use GeoJS inside Twist by using the IP slash command. For example `/geojs 8.8.8.8`.
+You can use GeoJS inside Twist by using the GeoJS slash command. For example `/geojs 8.8.8.8`.
 
-<div class="screenshot-holder">
-  <a href="/img/chatops/twist_app_example.png" data-title="Dashboard - Project Management" data-toggle="lightbox">
-    <img class="img-responsive" src="/img/chatops/twist_app_example.png" alt="screenshot">
-  </a>
-  <a class="mask" href="/img/chatops/twist_app_example.png" data-title="Dashboard - Project Management" data-toggle="lightbox">
-    <i class="icon fa fa-search-plus"></i>
-  </a>
+<div class="row">
+  <div class="screenshot-holder col-xs-6 col-md-3">
+    <a href="/img/chatops/twist_app_example.png" data-title="Twist App Example" data-toggle="lightbox">
+      <img class="img-responsive" src="/img/chatops/twist_app_example_thumb.png" alt="screenshot">
+    </a>
+    <a class="mask" href="/img/chatops/twist_app_example.png" data-title="Twist App Example" data-toggle="lightbox">
+      <i class="icon fa fa-search-plus"></i>
+    </a>
+  </div>
 </div>
 
 ## Slack <i class="fa fa-slack" aria-hidden="true"></i>
