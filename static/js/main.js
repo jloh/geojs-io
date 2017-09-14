@@ -45,3 +45,22 @@ $(document).ready(function() {
 
 
 });
+ghost.init({
+  clientId: "ghost-frontend",
+  clientSecret: "ee04fe3ef68a"
+ });
+
+function onSuccess(data) {
+  var $result = $('#latest-post');
+  $.each(data.posts, function (i, post) {
+    $result.replaceWith(
+      '<a href="https://jloh.co' + post.url + '" title="' + post.title + '">' + post.title + '</a>'
+    );
+  });
+}
+
+jQuery(document).ready(function () {
+  $.get(
+    ghost.url.api('posts', {limit: 1, filter: 'tag:geojs'})
+  ).done(onSuccess);
+});

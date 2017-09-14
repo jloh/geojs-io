@@ -25,3 +25,12 @@
 body {
     background: #f9f9fb;
 }
+
+/* Fixes for navbar */
+.navbar {
+    margin-bottom: 0px;
+}
+
+.navbar-right {
+    margin-right: -5px;
+}
