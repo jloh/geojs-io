@@ -19,7 +19,9 @@
             <div class="container">
                 <div id="doc-header" class="doc-header text-center">
                     <h1 class="doc-title"><i class="icon fa fa-{{ if .Params.icon }}{{ .Params.icon }}{{ else }}paper-plane{{ end }}"></i> {{ .Title }}</h1>
-		    <div class="meta"><i class="fa fa-clock-o"></i> Last updated: {{ .Lastmod.Format "Jan 2, 2006" }} {{ with .GitInfo }} <a href="{{ $.Site.Params.repo }}/commit/{{ .Hash }}" title="{{ .Subject }}" taget="_blank"><i class="fa fa-github-alt"></i></a>{{ end }} <a href="{{ $.Site.Params.repo }}/blob/master/content/{{ .File.Path }}" title="Edit this page" taget="_blank"><i class="fa fa-pencil"></i></a></div>
+                    {{ if ne $.Params.lastupdate "false" }}
+		        <div class="meta"><i class="fa fa-clock-o"></i> Last updated: {{ .Lastmod.Format "Jan 2, 2006" }} {{ with .GitInfo }} <a href="{{ $.Site.Params.repo }}/commit/{{ .Hash }}" title="{{ .Subject }}" taget="_blank"><i class="fa fa-github-alt"></i></a>{{ end }} <a href="{{ $.Site.Params.repo }}/blob/master/content/{{ .File.Path }}" title="Edit this page" taget="_blank"><i class="fa fa-pencil"></i></a></div>
+                    {{ end }}
                 </div><!--//doc-header-->
                 <div class="doc-body">
                     <div class="doc-content">

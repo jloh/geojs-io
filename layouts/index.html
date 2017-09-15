@@ -30,7 +30,7 @@
                     {{ .Content }}
                 </div><!--//intro-->
                 <div id="cards-wrapper" class="cards-wrapper row">
-                    {{ range .Paginator.Pages.ByWeight }} {{ partial "item" . }} {{ end }}
+                    {{ range (where .Paginator.Pages.ByWeight ".Params.homepage" "!=" "false")}} {{ partial "item" . }} {{ end }}
                 </div><!--//cards-->
                 
             </div><!--//container-->

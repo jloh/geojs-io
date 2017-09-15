@@ -31,19 +31,6 @@ twitter = "itsjloh"
 email   = "contact@geojs.io"
 repo    = "https://github.com/jloh/geojs-io"
 
-[[menu.main]]
-    name = "Docs"
-    weight = -100
-    url = "/docs/"
-[[menu.main]]
-    name = "Blog"
-    weight = -90
-    url = "https://jloh.co/tag/geojs/"
-##[[menu.main]]
-##    name = "Live"
-##    weight = -100
-##    url = "/live/"
-
 [outputs]
 home = [ "HTML", "RSS", "REDIRECTS", "HEADERS" ]
 
