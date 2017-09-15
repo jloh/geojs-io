@@ -25,13 +25,31 @@
         
         <section class="cards-section text-center">
             <div class="container">
+                <div class="row info">
+                    <h2 class="title">Packed full of features</h2>
+                    <ul class="col-md-6 list-unstyled">
+                      <li>HTTPS only</li>
+                      <li>Multiple formats</li>
+                      <li>Highly available and geo routed</li>
+                    </ul>
+                    <ul class="col-md-6 list-unstyled">
+                      <li>IPv4 and IPv6</li>
+                      <li>No rate limits (yet)</li>
+                      <li>Cross-origin resource sharing (CORS)</li>
+                    </ul>
+                </div>
                 <h2 class="title">Getting started is easy!</h2>
                 <div class="intro">
                     {{ .Content }}
                 </div><!--//intro-->
                 <div id="cards-wrapper" class="cards-wrapper row">
+                    <h2 class="title">Documentation</h2>
                     {{ range (where .Paginator.Pages.ByWeight ".Params.homepage" "!=" "false")}} {{ partial "item" . }} {{ end }}
                 </div><!--//cards-->
+                <div class="row info">
+                    <h2 class="title">Notes & Acknowledgements</h2>
+                    <p>I'd like to thank <a href="http://www.telize.com/" title="Telize">Telize</a> for inspiring me to create this and MaxMind, as all GeoIP data is sourced from their GeoLite database, available at maxmind.com.</p>
+                </div>
                 
             </div><!--//container-->
         </section><!--//cards-section-->

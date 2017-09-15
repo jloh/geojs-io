@@ -10,18 +10,7 @@
 .hw-changelog-page .HW_visible {
     right: 8px;
 }
-/*.HW_visible {
-    left: -5px;
-}
-/*.hw-changelog:after {
-    content: "Changelog";
-    display: inline;
-    position: relative;
-    left: 28px;
-}
-#HW_badge_cont {
-    top: 25px;
-} */
+
 body {
     background: #f9f9fb;
 }
@@ -33,4 +22,12 @@ body {
 
 .navbar-right {
     margin-right: -5px;
+}
+
+/* Additional frontpage divs */
+.cards-section .info {
+    margin: 0 auto;
+    max-width: 800px;
+    margin-bottom: 30px;
+    color: #616670;
 }

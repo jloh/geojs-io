@@ -13,7 +13,7 @@ description: "REST/JSON/JSONP GeoIP API"
 <p><div class="text-left">
 {{% md %}}
 ```html
-Hello <span id="user_ip"></span>. The IP you're behind has a country code of <span id="user_countrycode"></span>.
+Hello <span id="user_ip"><i class="fa fa-cog fa-spin"></i></span>. The IP you're behind has a country code of <span id="user_countrycode"><i class="fa fa-cog fa-spin"></i></span>.
 
 <script type="application/javascript">
     function geoip(json){
@@ -23,7 +23,7 @@ Hello <span id="user_ip"></span>. The IP you're behind has a country code of <sp
         countrycode.textContent = json.country_code;
     }
 </script>
-<script src="https://get.geojs.io/v1/ip/geo.js"></script>
+<script async src="https://get.geojs.io/v1/ip/geo.js"></script>
 ```
 {{% /md %}}
 </div></p>
