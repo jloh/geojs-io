@@ -14,7 +14,8 @@ aliases:
 
 GeoJS's main endpoint gives you the ability to lookup the requesters/specific IP information in multiple formats.
 
-<h2 class="section-title">IP</h2>
+## IP
+---
   
 This endpoint returns the requesters IP. You can specify a custom callback for the JSONP endpoint.
 
@@ -102,8 +103,9 @@ geoip({
 </div>
 
 ## IP - Country
+---
 
-This endpoint returns information about an IPs country. You can specify a custom callback for the JSONP endpoint along with requesting information about multiple specific IPs using the IP arg.
+This endpoint returns information about an IPs country. You can specify a custom callback for the JSONP endpoint along with requesting information about multiple IPs using the IP arg.
 
 All URIs support looking up a specific IP address by adding it as part of the URI. The JSON and text URIs have the additional option to supply multiple IPs (IPv6 or IPv4) comma separated in the IP arg. 
 
@@ -234,6 +236,7 @@ countryip({
 </div>
 
 ## IP - Country Full
+---
 
 This endpoint only has a text version available as it is the exact same as the above, however it returns the full country name as opposed to the two letter code.
 
@@ -308,10 +311,11 @@ Australia
 </div>
 
 ## IP - Geo
+---
 
-Unlike other endpoints the Geo endpoint doesn't have a text based version, it simply contains to much information to be useful as plain text. If people think otherwise, please reach out and let me know.
+Unlike other endpoints the Geo endpoint doesn't have a text based version, it simply contains too much information to be useful as plain text. If people think otherwise, please reach out and let me know.
 
-This endpoint contains the requesting IP within the `json` as the `ip` key. It also contains latitude and longitude information along with the country data included in the country endpoint.
+This endpoint mainly contains geographical information about an IP such as its latitude and longitude, along with the owning (ASN) organisiation.
 
 ### URIs
 
