@@ -17,6 +17,14 @@
 
     {{ partialCached "head/favicon" . }}
     {{ partialCached "head/css" . }}
+    <!-- Headway App -->
+    <script>
+      var HW_config = {
+        selector: ".hw-changelog", // CSS selector where to inject the badge
+        account:  "76zaR7"
+      }
+    </script>
+    <script async src="//cdn.headwayapp.co/widget.js"></script>
 </head> 
 
 <body class="{{ if .IsHome }}landing-page{{ end }} body-blue">   
@@ -70,14 +78,6 @@
     <script type="text/javascript" src="/plugins/jquery-match-height/jquery.matchHeight-min.js"></script>
     <script type="text/javascript" src="https://jloh.co/public/ghost-sdk.min.js"></script>
     <script type="text/javascript" src="/js/main.js"></script>
-    <!-- Headway App -->
-    <script>
-      var HW_config = {
-        selector: ".hw-changelog", // CSS selector where to inject the badge
-        account:  "76zaR7"
-      }
-    </script>
-    <script async src="//cdn.headwayapp.co/widget.js"></script>
     {{ if .IsHome}}
     <script type="application/javascript">
         function geoip(json){
@@ -87,7 +87,7 @@
             countrycode.textContent = json.country_code;
         }
     </script>
-    <script src="https://get.geojs.io/v1/ip/geo.js"></script>
+    <script async src="https://get.geojs.io/v1/ip/geo.js"></script>
     {{ end }}
 </body>
 </html>
