@@ -315,7 +315,7 @@ Australia
 
 Unlike other endpoints the Geo endpoint doesn't have a text based version, it simply contains too much information to be useful as plain text. If people think otherwise, please reach out and let me know.
 
-This endpoint mainly contains geographical information about an IP such as its latitude and longitude, along with the owning (ASN) organisiation.
+This endpoint mainly contains geographical information about an IP, such as its latitude and longitude, along with the owning (ASN) organisiation.
 
 ### URIs
 
