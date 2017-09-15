@@ -6,7 +6,7 @@ description: "REST/JSON/JSONP GeoIP API"
 
 <p>Checkout the text below, its generated on the fly by GeoJS itself.</p>
 
-<blockquote><p>Hello <span id="user_ip"></span>. The IP you're behind has a country code of <span id="user_countrycode"></span>.</p></blockquote>
+<blockquote><p>Hello <span id="user_ip"><i class="fa fa-cog fa-spin"></i></span>. The IP you're behind has a country code of <span id="user_countrycode"><i class="fa fa-cog fa-spin"></i></span>.</p></blockquote>
 
 <p>All that from this little snippet</p>
 
