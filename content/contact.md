@@ -16,10 +16,11 @@ I can be contacted at contact (at) geojs (dot) io or use the contact form below!
   </div>
   <div class="form-group">
     <label for="email">Email address</label>
-    <input type="email" class="form-control" id="email1" placeholder="Email" name="Email">
+    <input type="email" class="form-control" id="email" placeholder="Email" name="Email">
   </div>
   <div class="form-group">
-    <textarea class="form-control" rows="3" name="message" placeholder="Message"></textarea>
+    <label for="message">Message</label>
+    <textarea class="form-control" rows="3" name="Message" id="message" placeholder="Message"></textarea>
   </div>
   <button type="submit" class="btn btn-default">Submit</button>
 </form>
