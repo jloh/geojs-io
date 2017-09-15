@@ -4,7 +4,7 @@ weight: 10
 description: "REST/JSON/JSONP GeoIP API"
 ---
 
-<p>Checkout the text below, its generated on the fly from GeoJS itself.</p>
+<p>Checkout the text below, its generated on the fly by GeoJS itself.</p>
 
 <blockquote><p>Hello <span id="user_ip"></span>. The IP you're behind has a country code of <span id="user_countrycode"></span>.</p></blockquote>
 

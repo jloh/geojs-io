@@ -12,12 +12,13 @@ Aliases:
 ---
 
 ## HipChat
+---
 
 HipChat integration is a major work in progress, I haven't published it to their Marketplace at this stage.
 
 ### Installation
 
-The HipChat integration can be installed by using a Integration URL. Our Integration URL is https://get.geojs.io/v1/hooks/hipchat/install
+The HipChat integration can be installed by using a Integration URL, which you can find here https://get.geojs.io/v1/hooks/hipchat/install
 
 ### Usage
 
@@ -35,14 +36,15 @@ After installation, you can use the integration by using the GeoJS slash command
 </div>
 
 ## Twist App
+---
 
 ### Installation
 
-Twist makes it super easy to install our integration. You can find it in [their marketplace](https://twistapp.com/integrations/install/198_a1a4dc4678cb01d89cdc4533).
+Twist makes it super easy to install the integration. You can find it in [their marketplace](https://twistapp.com/integrations/install/198_a1a4dc4678cb01d89cdc4533).
 
 ### Usage
 
-You can use GeoJS inside Twist by using the GeoJS slash command. For example `/geojs 8.8.8.8`.
+Same as the above, you can use it within Twist by using the GeoJS slash command. For example `/geojs 8.8.8.8`.
 
 <div class="row">
   <div class="screenshot-holder col-xs-6 col-md-3">
@@ -56,5 +58,6 @@ You can use GeoJS inside Twist by using the GeoJS slash command. For example `/g
 </div>
 
 ## Slack <i class="fa fa-slack" aria-hidden="true"></i>
+---
 
-Not quite there yet, we'll update once they're done!
+Currently testing Slack integration in-house, stay tuned for its release!
