@@ -54,7 +54,7 @@ function onSuccess(data) {
   var $result = $('#latest-post');
   $.each(data.posts, function (i, post) {
     $result.replaceWith(
-      '<a href="https://jloh.co' + post.url + '" title="' + post.title + '">' + post.title + '</a>'
+      '<a class="navbar-link" href="https://jloh.co' + post.url + '" title="' + post.title + '">' + post.title + '</a>'
     );
   });
 }
