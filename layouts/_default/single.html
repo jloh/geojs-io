@@ -23,7 +23,7 @@
 		        <div class="meta"><i class="fa fa-clock-o"></i> Last updated: {{ .Lastmod.Format "Jan 2, 2006" }} {{ with .GitInfo }} <a href="{{ $.Site.Params.repo }}/commit/{{ .Hash }}" title="{{ .Subject }}" taget="_blank"><i class="fa fa-github-alt"></i></a>{{ end }} <a href="{{ $.Site.Params.repo }}/blob/master/content/{{ .File.Path }}" title="Edit this page" taget="_blank"><i class="fa fa-pencil"></i></a></div>
                     {{ end }}
                 </div><!--//doc-header-->
-                <div class="doc-body">
+                <div class="doc-body col-md-10 col-md-offset-1">
                     <div class="doc-content">
                         <div class="content-inner">
                           {{ .Content }}
