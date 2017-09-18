@@ -60,4 +60,25 @@ Same as the above, you can use it within Twist by using the GeoJS slash command.
 ## Slack <i class="fa fa-slack" aria-hidden="true"></i>
 ---
 
-Currently testing Slack integration in-house, stay tuned for its release!
+### Installation
+
+Slack (like Twist) make installation super easy. Either [click here](https://slack.com/oauth/authorize?&client_id=159217363895.234425956290&scope=commands) or the button below.
+
+<a href="https://slack.com/oauth/authorize?&client_id=159217363895.234425956290&scope=commands"><img alt="Add to Slack" height="40" width="139" src="https://platform.slack-edge.com/img/add_to_slack.png" srcset="https://platform.slack-edge.com/img/add_to_slack.png 1x, https://platform.slack-edge.com/img/add_to_slack@2x.png 2x" /></a>
+
+### Usage
+
+Like everything else, you use the GeoJS slash command. For example `/geojs 8.8.8.8`.
+
+There are plans to optionally have it display the message to the whole chat, at this stage it only replies to you.
+
+<div class="row">
+  <div class="screenshot-holder col-xs-6 col-md-3">
+    <a href="/img/chatops/slack_app_example.png" data-title="Slack Example" data-toggle="lightbox">
+      <img class="img-responsive" src="/img/chatops/slack_app_example_thumb.png" alt="screenshot">
+    </a>
+    <a class="mask" href="/img/chatops/slack_app_example.png" data-title="Slack Example" data-toggle="lightbox">
+      <i class="icon fa fa-search-plus"></i>
+    </a>
+  </div>
+</div>
