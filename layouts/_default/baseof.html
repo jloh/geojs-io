@@ -14,6 +14,9 @@
     <link rel="canonical" href="{{ .Permalink }}"> {{ if (isset .Params "prev") }}
     <link rel="prev" href="{{ .Params.prev }}"> {{ end }} {{ if (isset .Params "next") }}
     <link rel="next" href="{{ .Params.next }}"> {{ end }}
+    {{- if eq .Params.noindex "true" }}
+    <meta name="robots" content="noindex">
+    {{ end -}}
 
     {{ template "_internal/opengraph.html" . }}
 
