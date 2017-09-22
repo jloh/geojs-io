@@ -24,7 +24,7 @@ Slack make installation super easy. Either [click here](https://slack.com/oauth/
 
 We currently only have one command, our slash command, which you can use by typing `/geojs [ip in here]`. For example `/geojs 8.8.8.8`.
 
-There are plans to optionally have it display the message to the whole chat, at this stage it only replies to you. Checkout our example image below.
+If you would like to show the result to the whole channel type `display` after the IP you're trying to lookup, eg `/geojs 8.8.8.8 display`.
 
 <div class="row">
   <div class="screenshot-holder col-xs-6 col-md-3">
