@@ -130,7 +130,7 @@ All URIs support looking up a specific IP address by adding it as part of the UR
       </tr>
       <tr>
         <th>JSONP</th>
-        <td>{{% md %}}`https://get.geojs.io/v1/ip/country.js(?callback=custom)` `https://get.geojs.io/v1/ip/country/{ip address}.js(?callback=custom)`{{% /md %}}</td>
+        <td>{{% md %}}`https://get.geojs.io/v1/ip/country.js(?callback=custom&ip=8.8.8.8,198.35.26.96)` `https://get.geojs.io/v1/ip/country/{ip address}.js(?callback=custom)`{{% /md %}}</td>
       </tr>
     </tbody>
   </table>
@@ -153,7 +153,7 @@ All URIs support looking up a specific IP address by adding it as part of the UR
         <td>{{% md %}}`ip`{{% /md %}}</td>
         <td>None</td>
         <td>Allows searching of multiple IPs at once</td>
-        <td>{{% md %}}`/v1/ip/country(.json)`{{% /md %}}</td>
+        <td>All</td>
       </tr>
       <tr>
         <td>{{% md %}}`callback`{{% /md %}}</td>
@@ -229,6 +229,27 @@ countryip({
   "name": "United States",
   "country_3": "USA"
 })
+```
+
+When querying multiple IPs using the `ip` arg the return becomes a list like below:
+
+```javascript
+countryip(
+  [
+    {
+      "name": "United States",
+      "country": "US",
+      "ip": "8.8.8.8",
+      "country_3": "USA"
+    },
+    {
+      "name": "United States",
+      "country": "US",
+      "ip": "198.35.26.96",
+      "country_3": "USA"
+    }
+  ]
+)
 ```
 {{% /md %}}
     </div>
@@ -334,7 +355,7 @@ This endpoint mainly contains geographical information about an IP, such as its 
       </tr>
       <tr>
         <th>JSONP</th>
-        <td>{{% md %}}`https://get.geojs.io/v1/ip/geo.js(?callback=custom)` `https://get.geojs.io/v1/ip/geo/{ip address}.js(?callback=custom)`{{% /md %}}</td>
+        <td>{{% md %}}`https://get.geojs.io/v1/ip/geo.js(?callback=custom&ip=8.8.8.8,198.35.26.96)` `https://get.geojs.io/v1/ip/geo/{ip address}.js(?callback=custom)`{{% /md %}}</td>
       </tr>
     </tbody>
   </table>
@@ -357,7 +378,7 @@ This endpoint mainly contains geographical information about an IP, such as its 
         <td>{{% md %}}`ip`{{% /md %}}</td>
         <td>None</td>
         <td>Allows searching of multiple IPs at once</td>
-        <td>{{% md %}}`/v1/ip/geo.js` `/v1/ip/geo.json`{{% /md %}}</td>
+        <td>All</td>
       </tr>
       <tr>
         <td>{{% md %}}`callback`{{% /md %}}</td>
@@ -444,6 +465,41 @@ geoip({
   "country": "United States",
   "country_code3": "USA"
 })
+```
+
+When querying multiple IPs using the `ip` arg the return becomes a list like below:
+
+```javascript
+geoip(
+  [
+    {
+      "longitude": "-97.8220",
+      "latitude": "37.7510",
+      "timezone": "",
+      "organization": "AS15169 Google Inc.",
+      "country_code": "US",
+      "ip": "8.8.8.8",
+      "area_code": "0",
+      "continent_code": "NA",
+      "country": "United States",
+      "country_code3": "USA"
+    },
+    {
+      "longitude": "-122.3942",
+      "city": "San Francisco",
+      "timezone": "America\/Los_Angeles",
+      "region": "California",
+      "organization": "AS14907 Wikimedia Foundation, Inc.",
+      "country_code": "US",
+      "ip": "198.35.26.96",
+      "latitude": "37.7898",
+      "area_code": "0",
+      "continent_code": "NA",
+      "country": "United States",
+      "country_code3": "USA"
+    }
+  ]
+)
 ```
 {{% /md %}}
     </div>
