@@ -7,7 +7,9 @@ lastupdate: "false"
 toc: false
 ---
 
-I can be contacted at contact (at) geojs (dot) io or use the contact form below!
+I can be contacted at <small>contact (at) geojs (dot) io</small>, through the [public Gitter room](https://gitter.im/jloh/geojs) or using the contact form!
+
+[![Gitter](https://img.shields.io/gitter/room/jloh/geojs.svg?style=flat-square&logo=gitter-white)](https://gitter.im/jloh/geojs)
 
 <form name="contact" action="thank-you" data-netlify="true">
   <div class="form-group">

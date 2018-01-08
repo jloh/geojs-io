@@ -1,5 +1,7 @@
 # GeoJS ![GeoJS Icon](static/favicon/v1/favicon-32x32.png)
 
+[![Gitter](https://img.shields.io/gitter/room/jloh/geojs.svg?style=flat-square&logo=gitter-white)](https://gitter.im/jloh/geojs)
+
 GeoJS is a highly avialable Geolocation lookup API with ChatOps integration and more. Some of its features include...
 
  * Multiple formats
@@ -11,4 +13,4 @@ GeoJS is a highly avialable Geolocation lookup API with ChatOps integration and 
 * Zero rate limits
 * Full Cross-origin resource sharing (CORS) support
 
-Checkout [the website](https://geojs.io) for more info!
+Checkout [the website](https://geojs.io) for more info or join us on [Gitter](https://gitter.im/jloh/geojs)!
