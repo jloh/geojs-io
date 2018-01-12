@@ -4,3 +4,4 @@
   X-Content-Type-Options: nosniff
   X-Made-By: @itsjloh
   Referrer-Policy: origin-when-cross-origin
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
