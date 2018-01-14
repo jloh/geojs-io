@@ -18,10 +18,6 @@ description = "GeoJS is a highly available REST/JSON/JSONP IP Geolocation lookup
 # Code higlighting settings
 pygmentsCodefences = true
 pygmentsCodeFencesGuesSsyntax = false
-pygmentsOptions = ""
-pygmentsStyle = "paraiso-light"
-# The monokai stylesheet is included in the base template.
-#pygmentsUseClasses = true
 
 [params]
 RSSLink = "/index.xml"

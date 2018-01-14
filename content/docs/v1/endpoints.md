@@ -85,19 +85,19 @@ This endpoint returns the requesters IP. You can specify a custom callback for t
 45.63.26.69
   ```
   {{% /md %}}</div>
-    <div role="tabpanel" class="tab-pane" id="ip-json">{{% md %}}
-```json
+    <div role="tabpanel" class="tab-pane" id="ip-json">
+{{< highlight json >}}
 {
   "ip": "45.63.26.69"
 }
-```
-{{% /md %}}</div>
+{{< /highlight >}}
+</div>
     <div role="tabpanel" class="tab-pane" id="ip-jsonp">{{% md %}}
-```javascript
+{{< highlight javascript >}}
 geoip({
   "ip": "45.63.26.69"
 })
-```
+{{< /highlight >}}
 {{% /md %}}</div>
   </div>
 </div>
