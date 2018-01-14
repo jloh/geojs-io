@@ -3,5 +3,6 @@
   X-XSS-Protection: 1; mode=block
   X-Content-Type-Options: nosniff
   X-Made-By: @itsjloh
+  X-GitHub: jloh/geojs-io
   Referrer-Policy: origin-when-cross-origin
   Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
