@@ -505,3 +505,106 @@ geoip(
     </div>
   </div>
 </div>
+
+# DNS
+---
+
+GeoJS' second endpoint allows you to query PTR records for IPs.
+
+## DNS - PTR
+---
+
+This endpoint returns the requester IP's PTR record. It is not currently possible to lookup multiple PTRs at once.
+
+### URIs
+
+<div class="table-responsive">
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>URI</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Text</th>
+        <td>{{% md %}}`https://get.geojs.io/v1/dns/ptr`  
+            `https://get.geojs.io/v1/dns/ptr/{ip address}`
+            {{% /md %}}
+        </td>
+      </tr>
+      <tr>
+        <th>JSON</th>
+        <td>{{% md %}}`https://get.geojs.io/v1/dns/ptr.json`  
+            `https://get.geojs.io/v1/dns/ptr/{ip address}.json`
+            {{% /md %}}
+        </td>
+      </tr>
+      <tr>
+        <th>JSONP</th>
+        <td>{{% md %}}`https://get.geojs.io/v1/dns/ptr.js(?callback=custom)`
+          `https://get.geojs.io/v1/dns/ptr/{ip address}.js(?callback=custom)`
+          {{% /md %}}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+### Query Parameters
+
+<div class="table-responsive">
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th>Paramater</th>
+        <th>Default</th>
+        <th>Description</th>
+        <th>Endpoint</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{% md %}}`callback`{{% /md %}}</td>
+        <td>{{% md %}}`ptr`{{% /md %}}</td>
+        <td>JSONP callback</td>
+        <td>{{% md %}}`/v1/dns/ptr.js`{{% /md %}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+### Example Responses
+
+<div>
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#dns-ptr-text" aria-controls="dns-ptr-text" role="tab" data-toggle="tab">Text</a></li>
+    <li role="presentation"><a href="#dns-ptr-json" aria-controls="dns-ptr-json" role="tab" data-toggle="tab">JSON</a></li>
+    <li role="presentation"><a href="#dns-ptr-jsonp" aria-controls="dns-ptr-jsonp" role="tab" data-toggle="tab">JSONP</a></li>
+  </ul>
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="dns-ptr-text">{{% md %}}
+
+  ```text
+google-public-dns-a.google.com
+  ```
+  {{% /md %}}</div>
+    <div role="tabpanel" class="tab-pane" id="dns-ptr-json">
+{{< highlight json >}}
+{
+  "ptr": "google-public-dns-a.google.com"
+}
+{{< /highlight >}}
+</div>
+    <div role="tabpanel" class="tab-pane" id="dns-ptr-jsonp">{{% md %}}
+{{< highlight javascript >}}
+ptr({
+  "ptr": "google-public-dns-a.google.com"
+})
+{{< /highlight >}}
+{{% /md %}}</div>
+  </div>
+</div>
