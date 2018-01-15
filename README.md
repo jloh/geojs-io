@@ -1,4 +1,6 @@
-# GeoJS ![GeoJS Icon](static/favicon/v1/favicon-32x32.png)
+<p align="center">
+  <img src="https://geojs.io/img/logo.png">
+</p>
 
 [![Gitter](https://img.shields.io/gitter/room/jloh/geojs.svg?style=flat-square&logo=gitter-white)](https://gitter.im/jloh/geojs)
 
