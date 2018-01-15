@@ -6,3 +6,5 @@
   X-GitHub: jloh/geojs-io
   Referrer-Policy: origin-when-cross-origin
   Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+/img/*
+  Cache-Control: max-age=604800, public
