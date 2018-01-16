@@ -42,3 +42,9 @@ body {
     position: relative;
     top: 5px;
 }
+
+/* Gitter button */
+a.gitter-open-chat-button:hover {
+    color: #fff;
+    text-decoration: none;
+}
