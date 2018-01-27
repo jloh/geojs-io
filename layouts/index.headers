@@ -1,3 +1,5 @@
+/img/*
+  Cache-Control: max-age=604800, public
 /*
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
@@ -6,8 +8,6 @@
   X-GitHub: jloh/geojs-io
   Referrer-Policy: origin-when-cross-origin
   Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
-/img/*
-  Cache-Control: max-age=604800, public
 */
   Link: </plugins/bootstrap/css/bootstrap.min.css>; rel=preload; as=style
   Link: </plugins/font-awesome/css/font-awesome.css>; rel=preload; as=style
