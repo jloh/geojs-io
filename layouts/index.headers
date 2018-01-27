@@ -8,3 +8,14 @@
   Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
 /img/*
   Cache-Control: max-age=604800, public
+*/
+  Link: </plugins/bootstrap/css/bootstrap.min.css>; rel=preload; as=style
+  Link: </plugins/font-awesome/css/font-awesome.css>; rel=preload; as=style
+  Link: </plugins/elegant_font/css/style.css>; rel=preload; as=style
+  Link: </css/styles.css>; rel=preload; as=style
+  Link: </css/custom.css?v=0.0.1>; rel=preload; as=style
+  Link: </plugins/jquery-1.12.3.min.js>; rel=preload; as=script
+  Link: </plugins/bootstrap/js/bootstrap.min.js>; rel=preload; as=script
+  Link: </plugins/lightbox/dist/ekko-lightbox.min.js>; rel=preload; as=script
+  Link: </plugins/jquery-match-height/jquery.matchHeight-min.js>; rel=preload; as=script
+  Link: </js/main.js>; rel=preload; as=script
