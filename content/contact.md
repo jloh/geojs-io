@@ -24,5 +24,6 @@ I can be contacted at <small>contact (at) geojs (dot) io</small>, through the [p
     <label for="message">Message</label>
     <textarea class="form-control" rows="3" name="Message" id="message" placeholder="Message"></textarea>
   </div>
+  <div netlify-recaptcha></div>
   <button type="submit" class="btn btn-default">Submit</button>
 </form>
