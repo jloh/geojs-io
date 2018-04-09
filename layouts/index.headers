@@ -7,7 +7,7 @@
   X-GitHub: jloh/geojs-io
   Referrer-Policy: origin-when-cross-origin
   Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
-  Content-Security-Policy: default-src 'none'; img-src 'self' data: img.shields.io stats.jloh.co platform.slack-edge.com; script-src 'self' jloh.co cdn.headwayapp.co stats.jloh.co sidecar.gitter.im get.geojs.io www.google.com www.gstatic.com 'sha256-SEvvKr00KMQCA7POg5BFR0FYk8qFjEjh1AKJ22vW+6Q=' 'sha256-dO4s5tJempBQvjIY+zwtGV4bMYut4icql0nWVSd2TEY=' 'sha256-TWGSgzf0lLKh94N/HDS8+LqFBitdcJnMYymiuCgy65g=' 'sha256-OcTeNhH11Pw4Cv0XgqitqUxBYL97kpL3xUsLrY0NKcg='; style-src 'self' 'unsafe-inline' cdn.headwayapp.co fonts.googleapis.com; frame-src headway-widget.net www.google.com; connect-src jloh.ghost.io; form-action 'self'; font-src 'self' fonts.gstatic.com; report-uri https://jloh.report-uri.com/r/d/csp/enforce
+  Content-Security-Policy: default-src 'none'; img-src 'self' data: img.shields.io stats.jloh.co platform.slack-edge.com; script-src 'self' jloh.co cdn.headwayapp.co stats.jloh.co sidecar.gitter.im get.geojs.io www.google.com www.gstatic.com 'sha256-SEvvKr00KMQCA7POg5BFR0FYk8qFjEjh1AKJ22vW+6Q=' 'sha256-dO4s5tJempBQvjIY+zwtGV4bMYut4icql0nWVSd2TEY=' 'sha256-TWGSgzf0lLKh94N/HDS8+LqFBitdcJnMYymiuCgy65g=' 'sha256-OcTeNhH11Pw4Cv0XgqitqUxBYL97kpL3xUsLrY0NKcg='; style-src 'self' 'unsafe-inline' cdn.headwayapp.co fonts.googleapis.com; frame-src headway-widget.net www.google.com https://gitter.im/jloh/geojs/~embed; connect-src jloh.ghost.io; form-action 'self'; font-src 'self' fonts.gstatic.com; report-uri https://jloh.report-uri.com/r/d/csp/enforce
 /img/*
   Cache-Control: max-age=604800, public
 /*/
