@@ -7,6 +7,7 @@
   X-GitHub: jloh/geojs-io
   Referrer-Policy: origin-when-cross-origin
   Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+  Content-Security-Policy-Report-Only: default-src 'none'; form-action 'none'; frame-ancestors 'none'; report-uri https://jloh.report-uri.com/r/d/csp/wizard
 /img/*
   Cache-Control: max-age=604800, public
 /*/
