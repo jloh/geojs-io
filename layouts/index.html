@@ -46,10 +46,15 @@
                     <h2 class="title">Documentation</h2>
                     {{ range (where .Paginator.Pages.ByWeight ".Params.homepage" "!=" "false")}} {{ partial "item" . }} {{ end }}
                 </div><!--//cards-->
+		<div class="row info">
+                    <h2 class="title">Sponsors</h2>
+                    <p>GeoJS is proudly powered by the DigitalOcean cloud. Use my <a href="https://m.do.co/c/2c9ab4daaa8d" title="DigitalOcean" >referral link</a> to get $10 free credit upon signup.
+                    <a href="https://www.digitalocean.com" title="DigitalOcean" ><img src="img/DO_Logo_horizontal_blue.svg" style="max-width: 450px; margin-top: 15px;"></img></a>
+                </div>
                 <div class="row info">
                     <h2 class="title">Notes & Acknowledgements</h2>
                     <p>I'd like to thank <a href="http://www.telize.com/" title="Telize">Telize</a> for inspiring me to create this and MaxMind, as all GeoIP data is sourced from their GeoLite database, available at maxmind.com.</p>
-		    <p>GeoJS is made with <i class="fa fa-heart"></i> by <a href="https://jloh.co" title="James Loh">jloh</a>. I can be foud online at <a href="https://jloh.co/l/blog" title="James' blog">my blog</a>, <a href="https://jloh.co/l/twitter" title="James on Twitter">Twitter</a>, <a href="https://jloh.co/l/github" title="James on GitHub">GitHub</a> and <a href="https://jloh.co/l/keybase" title="James on Keybase">Keybase</a>.</p>
+                    <p>GeoJS is made with <i class="fa fa-heart"></i> by <a href="https://jloh.co" title="James Loh">jloh</a>. I can be foud online at <a href="https://jloh.co/l/blog" title="James' blog">my blog</a>, <a href="https://jloh.co/l/twitter" title="James on Twitter">Twitter</a>, <a href="https://jloh.co/l/github" title="James on GitHub">GitHub</a> and <a href="https://jloh.co/l/keybase" title="James on Keybase">Keybase</a>.</p>
                 </div>
                 
             </div><!--//container-->

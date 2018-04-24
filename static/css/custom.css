@@ -48,3 +48,7 @@ a.gitter-open-chat-button:hover {
     color: #fff;
     text-decoration: none;
 }
+
+.footer {
+    padding: 6px 0;
+}
