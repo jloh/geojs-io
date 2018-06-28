@@ -4,7 +4,7 @@
 
 [![Gitter](https://img.shields.io/gitter/room/jloh/geojs.svg?style=flat-square&logo=gitter-white)](https://gitter.im/jloh/geojs)
 
-GeoJS is a highly avialable Geolocation lookup API with ChatOps integration and more. Some of its features include...
+GeoJS is a highly available Geolocation lookup API with ChatOps integration and more. Some of its features include...
 
  * Multiple formats
   * Plain text
