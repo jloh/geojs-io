@@ -1,3 +1,7 @@
+[build]
+  command = "npm run docs:build"
+  publish = "docs/.vuepress/dist"
+
 [context.production]
   command = "npm run docs:build"
   publish = "docs/.vuepress/dist"
