@@ -1,7 +1,7 @@
-public/
 node_modules/
-data/css/
-data/js/
+
+# Build docs
+docs/.vuepress/dist
 
 # Vim stuff!
 # Swap

@@ -8,7 +8,7 @@ sidebar: auto
 
 ## Overview
 
-GeoJS currently integrates with Slack, Twist App and HipChat enabling you to lookup IP information directly from chat.
+GeoJS currently integrates with Slack, Twist App and HipChat enabling you to lookup IP information directly from chat. 
 
 ## Slack
 
@@ -24,7 +24,7 @@ We currently only have one command, our slash command, which you can use by typi
 
 If you would like to show the result to the whole channel type `display` after the IP you’re trying to lookup, eg `/geojs 8.8.8.8 display`.
 
-![](/img/chatops/slack_app_example.png)
+![](./img/slack_app_example.png)
 
 ### Support
 
@@ -42,7 +42,7 @@ Twist makes it super easy to install the integration. You can find it in [their 
 
 Use the `/geojs` slash command in chat. For example /geojs 8.8.8.8.
 
-![](/img/chatops/twist_app_example.png)
+![](./img/twist_app_example.png)
 
 ## HipChat
 
@@ -58,4 +58,4 @@ The HipChat integration can be installed by using a Integration URL, which you c
 
 After installation, you can use the integration by using the GeoJS slash command. For example `/geojs 8.8.8.8`.
 
-![](/img/chatops/hipchat_app_example.png)
+![](./img/hipchat_app_example.png)
