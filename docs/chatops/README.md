@@ -2,7 +2,7 @@
 sidebar: auto
 ---
 
-# Chat Ops
+# ChatOps
 
 <DO/>
 

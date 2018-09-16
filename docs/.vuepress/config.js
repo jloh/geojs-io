@@ -1,7 +1,7 @@
 module.exports = {
   title: 'GeoJS',
   description: 'REST/JSON/JSONP IP Geolocation lookup API',
-  serviceWorker: true,
+  serviceWorker: false,
   themeConfig: {
     repo: 'jloh/geojs',
     docsRepo: 'jloh/geojs-io',
@@ -24,13 +24,20 @@ module.exports = {
         link: '/v1/'
       },
       {
-      	text: 'ChatOps',
-      	link: '/v1/chatops/'
+        text: 'ChatOps',
+        link: '/chatops/'
       },
       {
-      	text: 'Contact',
-      	link: '/contact/'
+        text: 'Contact',
+        link: '/contact/'
       }
     ]
+  },
+  markdown: {
+    config: md => {
+      md.set({ linkify: true })
+      const vuepressTabs = require('vuepress-tabs')
+      vuepressTabs(md)
+    }
   }
 }
