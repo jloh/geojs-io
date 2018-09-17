@@ -47,4 +47,6 @@ $ curl -s https://get.geojs.io/v2/ip/country.json | jq .
 }
 ```
 
-<mailing-list actionUrl="https://jloh.us14.list-manage.com/subscribe/post?u=9c6287d73fb594aeb6a7a28ac&amp;id=02218ac43f" token="b_9c6287d73fb594aeb6a7a28ac_02218ac43f" successMessage="Almost finished... We need to confirm your email address. To complete the subscription process, please click the link in the email we just sent you."/>
+<ClientOnly>
+  <mailing-list actionUrl="https://jloh.us14.list-manage.com/subscribe/post?u=9c6287d73fb594aeb6a7a28ac&amp;id=02218ac43f" token="b_9c6287d73fb594aeb6a7a28ac_02218ac43f" successMessage="Almost finished... We need to confirm your email address. To complete the subscription process, please click the link in the email we just sent you."/>
+</ClientOnly>
