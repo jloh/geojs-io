@@ -8,6 +8,6 @@
     "sass-loader": "^7.1.0",
     "vue-tabs-component": "^1.5.0",
     "vuepress": "^0.14.3",
-    "vuepress-tabs": "^0.1.3"
+    "vuepress-tabs": "^0.1.4"
   }
 }
