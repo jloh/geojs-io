@@ -48,9 +48,9 @@ This endpoint returns the requesters IP. You can specify a custom callback for t
 
 #### Example Responses
 
-:::: tabs :options="{ useUrlFragment: false }"
+:::: tabs
 
-::: tab Text
+::: tab id="text-text" Text
 ```
 8.8.8.8
 ```
@@ -65,7 +65,7 @@ This endpoint returns the requesters IP. You can specify a custom callback for t
 ```
 :::
 
-::: tab JSONP
+::: tab id="text-jsonp" JSONP
 ``` javascript
 geoip({
   "ip": "8.8.8.8"
