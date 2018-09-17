@@ -4,6 +4,7 @@
     "docs:build": "vuepress build docs"
   },
   "dependencies": {
+    "fh-components": "^1.3.6",
     "node-sass": "^4.9.3",
     "sass-loader": "^7.1.0",
     "vue-tabs-component": "^1.5.0",
