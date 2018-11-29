@@ -11,8 +11,6 @@ gulp.task('js-compress', function () {
   del(['static/js/*.js'])
   gulp.src([
     'themes/kube/static/js/jquery-2.1.4.min.js',
-    'themes/kube/static/js/tocbot.min.js',
-    'themes/kube/static/js/kube.js'
   ])
   .pipe(concatJS('main.js'))
   .pipe(uglify())
@@ -26,9 +24,7 @@ gulp.task('js-compress', function () {
 gulp.task('css-compress', function () {
   del(['static/css/*.css'])
   gulp.src([
-    'themes/kube/static/css/font.css',
-    'themes/kube/static/css/kube.css',
-    'src/css/master.css'
+    'node_modules/bulma/css/bulma.css'
   ])
   .pipe(concatCSS("main.css"))
   .pipe(cleancss())
@@ -38,4 +34,4 @@ gulp.task('css-compress', function () {
   .pipe(gulp.dest('data/css/'))
 });
 
-gulp.task('default', ['js-compress', 'css-compress'])
+gulp.task('default', ['css-compress'])
