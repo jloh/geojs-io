@@ -234,22 +234,17 @@ countryip({
 When querying multiple IPs using the `ip` arg the return becomes a list like below:
 
 ```javascript
-countryip(
-  [
-    {
-      "name": "United States",
-      "country": "US",
-      "ip": "8.8.8.8",
-      "country_3": "USA"
-    },
-    {
-      "name": "United States",
-      "country": "US",
-      "ip": "198.35.26.96",
-      "country_3": "USA"
-    }
-  ]
-)
+countryip([{
+  "country": "US",
+  "country_3": "USA",
+  "ip": "8.8.8.8",
+  "name": "United States"
+}, {
+  "country": "US",
+  "country_3": "USA",
+  "ip": "198.35.26.96",
+  "name": "United States"
+}])
 ```
 {{% /md %}}
     </div>
@@ -404,16 +399,18 @@ This endpoint mainly contains geographical information about an IP, such as its 
 {{% md %}}
 ```json
 {
+  "accuracy": 1000,
   "area_code": "0",
+  "asn": 15169,
   "continent_code": "NA",
   "country": "United States",
   "country_code": "US",
   "country_code3": "USA",
   "ip": "8.8.8.8",
-  "latitude": "37.7510",
-  "longitude": "-97.8220",
-  "organization": "AS15169 Google Inc.",
-  "timezone": ""
+  "latitude": "37.751",
+  "longitude": "-97.822",
+  "organization": "AS15169 Google LLC",
+  "organization_name": "Google LLC"
 }
 ```
 
@@ -422,28 +419,32 @@ When multiple IPs are queried using the the `ip` arg on a request you get a resp
 ```json
 [
   {
+    "accuracy": 1000,
     "area_code": "0",
+    "asn": 15169,
     "continent_code": "NA",
     "country": "United States",
     "country_code": "US",
     "country_code3": "USA",
     "ip": "8.8.8.8",
-    "latitude": "37.7510",
-    "longitude": "-97.8220",
-    "organization": "AS15169 Google Inc.",
-    "timezone": ""
+    "latitude": "37.751",
+    "longitude": "-97.822",
+    "organization": "AS15169 Google LLC",
+    "organization_name": "Google LLC"
   },
   {
+    "accuracy": 1000,
     "area_code": "0",
-    "city": "San Francisco",
+    "asn": 14907,
     "continent_code": "NA",
     "country": "United States",
     "country_code": "US",
     "country_code3": "USA",
     "ip": "198.35.26.96",
-    "organization": "AS14907 Wikimedia Foundation, Inc.",
-    "region": "California",
-    "timezone": "America/Los_Angeles"
+    "latitude": "37.751",
+    "longitude": "-97.822",
+    "organization": "AS14907 Wikimedia Foundation Inc.",
+    "organization_name": "Wikimedia Foundation Inc."
   }
 ]
 ```
@@ -452,54 +453,51 @@ When multiple IPs are queried using the the `ip` arg on a request you get a resp
     <div role="tabpanel" class="tab-pane" id="geo-example-jsonp">{{% md %}}
 ```javascript
 geoip({
-  "city": "San Francisco",
-  "timezone": "America\/Los_Angeles",
-  "organization": "AS14907 Wikimedia Foundation, Inc.",
-  "region": "California",
-  "latitude": "37.7898",
-  "country_code": "US",
-  "ip": "8.8.8.8",
-  "longitude": "-122.3942",
+  "organization_name": "Google LLC",
+  "accuracy": 1000,
+  "asn": 15169,
+  "organization": "AS15169 Google LLC",
+  "longitude": "-97.822",
+  "country_code3": "USA",
   "area_code": "0",
-  "continent_code": "US",
+  "ip": "8.8.8.8",
   "country": "United States",
-  "country_code3": "USA"
+  "continent_code": "NA",
+  "country_code": "US",
+  "latitude": "37.751"
 })
 ```
 
 When querying multiple IPs using the `ip` arg the return becomes a list like below:
 
 ```javascript
-geoip(
-  [
-    {
-      "longitude": "-97.8220",
-      "latitude": "37.7510",
-      "timezone": "",
-      "organization": "AS15169 Google Inc.",
-      "country_code": "US",
-      "ip": "8.8.8.8",
-      "area_code": "0",
-      "continent_code": "NA",
-      "country": "United States",
-      "country_code3": "USA"
-    },
-    {
-      "longitude": "-122.3942",
-      "city": "San Francisco",
-      "timezone": "America\/Los_Angeles",
-      "region": "California",
-      "organization": "AS14907 Wikimedia Foundation, Inc.",
-      "country_code": "US",
-      "ip": "198.35.26.96",
-      "latitude": "37.7898",
-      "area_code": "0",
-      "continent_code": "NA",
-      "country": "United States",
-      "country_code3": "USA"
-    }
-  ]
-)
+geoip([{
+  "organization_name": "Google LLC",
+  "accuracy": 1000,
+  "asn": 15169,
+  "organization": "AS15169 Google LLC",
+  "longitude": "-97.822",
+  "country_code3": "USA",
+  "area_code": "0",
+  "ip": "8.8.8.8",
+  "country": "United States",
+  "continent_code": "NA",
+  "country_code": "US",
+  "latitude": "37.751"
+}, {
+  "organization_name": "Wikimedia Foundation Inc.",
+  "accuracy": 1000,
+  "asn": 14907,
+  "organization": "AS14907 Wikimedia Foundation Inc.",
+  "longitude": "-97.822",
+  "country_code3": "USA",
+  "area_code": "0",
+  "ip": "198.35.26.96",
+  "country": "United States",
+  "continent_code": "NA",
+  "country_code": "US",
+  "latitude": "37.751"
+}])
 ```
 {{% /md %}}
     </div>
