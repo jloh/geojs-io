@@ -1,10 +1,9 @@
+[build]
 [context.production]
-  command = "hugo"
+  command = "npx gulp && hugo"
 [context.production.environment]
-  HUGO_VERSION = "0.32.4"
+  HUGO_VERSION = "0.45.1"
   HUGO_ENV     = "production"
-
 [context.deploy-preview]
-  command = "hugo -b $DEPLOY_PRIME_URL"
-[context.deploy-preview.environment]
-  HUGO_VERSION = "0.32.4"
+  HUGO_VERSION = "0.45.1"
+  command = "npx gulp && hugo -b $DEPLOY_PRIME_URL"
