@@ -78,3 +78,6 @@ typings/
 
 # dotenv environment variables file
 .env
+
+# CSS files that're built
+static/css
