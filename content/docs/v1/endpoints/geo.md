@@ -1,18 +1,9 @@
 ---
-description: "Current endpoints that can be used"
+description: "Contains all available geographical information about an IP"
 title: Geo
 weight: 110
 draft: false
-bref: "Current endpoints that can be used"
 toc: true
-# Old URLs
-aliases:
-  - "/docs/endpoints/"
----
-
-GeoJS's main endpoint gives you the ability to lookup the requesters/specific IP information in multiple formats.
-
-## IP - Geo
 ---
 
 Unlike other endpoints the Geo endpoint doesn't have a text based version, it simply contains too much information to be useful as plain text. If people think otherwise, please reach out and let me know.
@@ -25,8 +16,8 @@ This endpoint mainly contains geographical information about an IP, such as its 
 {{% md %}}
 | Type  | URI |
 | ----- | --- |
-| JSON  | `https://get.geojs.io/v1/ip/geo.json(?ip=8.8.8.8,198.35.26.96)` `https://get.geojs.io/v1/ip/geo/{ip address}.json` |
-| JSONP | `https://get.geojs.io/v1/ip/geo.js(?callback=custom&ip=8.8.8.8,198.35.26.96)` `https://get.geojs.io/v1/ip/geo/{ip address}.js(?callback=custom)` |
+| JSON  | `https://get.geojs.io/v1/ip/geo.json` `https://get.geojs.io/v1/ip/geo/{ip address}.json` |
+| JSONP | `https://get.geojs.io/v1/ip/geo.js` `https://get.geojs.io/v1/ip/geo/{ip address}.js` |
 
 {{% /md %}}
 </div>
@@ -44,18 +35,10 @@ This endpoint mainly contains geographical information about an IP, such as its 
 {{% /md %}}
 </div>
 
-## Example Responses
+## Examples
 
-<div>
-  <!-- Nav tabs -->
-  <ul class="nav nav-tabs" role="tablist">
-    <li role="presentation" class="active"><a href="#geo-example-json" aria-controls="geo-example-json" role="tab" data-toggle="tab">JSON</a></li>
-    <li role="presentation"><a href="#geo-example-jsonp" aria-controls="geo-example-jsonp" role="tab" data-toggle="tab">JSONP</a></li>
-  </ul>
-  <!-- Tab panes -->
-  <div class="tab-content">
-    <div role="tabpanel" class="tab-pane active" id="geo-example-json">
-{{% md %}}
+### JSON
+
 ```json
 {
   "accuracy": 1000,
@@ -107,9 +90,9 @@ When multiple IPs are queried using the the `ip` arg on a request you get a resp
   }
 ]
 ```
-{{% /md %}}
-    </div>
-    <div role="tabpanel" class="tab-pane" id="geo-example-jsonp">{{% md %}}
+
+### JSONP
+
 ```javascript
 geoip({
   "organization_name": "Google LLC",
@@ -158,7 +141,3 @@ geoip([{
   "latitude": "37.751"
 }])
 ```
-{{% /md %}}
-    </div>
-  </div>
-</div>
