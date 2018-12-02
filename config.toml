@@ -33,8 +33,6 @@ home = [ "HTML", "RSS", "REDIRECTS", "HEADERS" ]
 
 [mediaTypes]
 [mediaTypes."text/netlify"]
-suffix = ""
-delimiter = ""
 
 [outputFormats]
 [outputFormats.REDIRECTS]
