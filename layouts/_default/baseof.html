@@ -41,8 +41,10 @@
 
   <!-- Main Javascript -->
   <script src="{{ print "js/" ( index .Site.Data.js "menu.js" ) | relURL }}"></script>
+  {{ if eq (getenv "HUGO_ENV") "PRODUCTION" }}
   <script async src="https://cdn.simpleanalytics.io/hello.js"></script>
   <noscript><img src="https://api.simpleanalytics.io/hello.gif" alt=""></noscript>
+  {{ end }}
   {{ if .IsHome}}
   <script type="application/javascript">
     function geoip(json) {
