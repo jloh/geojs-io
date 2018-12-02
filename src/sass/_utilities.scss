@@ -23,13 +23,13 @@ $util-versions: (padding: p, margin: m);
     }
   
     .#{$v}x-#{$i} {
-      $k-left: #{$i}rem !important;
-      $k-right: #{$i}rem !important;
+      #{$k}-left: #{$i}rem !important;
+      #{$k}-right: #{$i}rem !important;
     }
     
     .#{$v}y-#{$i} {
-      $k-bottom: #{$i}rem !important;
-      $k-top: #{$i}rem !important;
+      #{$k}-bottom: #{$i}rem !important;
+      #{$k}-top: #{$i}rem !important;
     }
   }
 }
