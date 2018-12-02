@@ -1,38 +1,39 @@
 <!DOCTYPE html>
-{{ `<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->` | safeHTML }}  
-{{ `<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->` | safeHTML }}  
-{{ `<!--[if !IE]>  <html lang="en"> <![endif]-->` | safeHTML }}  
+{{ `<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->` | safeHTML }}
+{{ `<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->` | safeHTML }}
+{{ `<!--[if !IE]>  <html lang="en"> <![endif]-->` | safeHTML }}
+
 <head>
-    <title>{{ block "title" . }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Slack app -->
-    <meta name="slack-app-id" content="A6WCHU48J">
-    {{ partial "head/meta" . }}
-    <link rel="canonical" href="{{ .Permalink }}"> {{ if (isset .Params "prev") }}
-    <link rel="prev" href="{{ .Params.prev }}"> {{ end }} {{ if (isset .Params "next") }}
-    <link rel="next" href="{{ .Params.next }}"> {{ end }}
-    {{- if eq .Params.noindex "true" }}
-    <meta name="robots" content="noindex">
-    {{ end -}}
+  <title>{{ block "title" . }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+  <!-- Meta -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Slack app -->
+  <meta name="slack-app-id" content="A6WCHU48J">
+  {{ partial "head/meta" . }}
+  <link rel="canonical" href="{{ .Permalink }}"> {{ if (isset .Params "prev") }}
+  <link rel="prev" href="{{ .Params.prev }}"> {{ end }} {{ if (isset .Params "next") }}
+  <link rel="next" href="{{ .Params.next }}"> {{ end }}
+  {{- if eq .Params.noindex "true" }}
+  <meta name="robots" content="noindex">
+  {{ end -}}
 
-    {{ template "_internal/opengraph.html" . }}
+  {{ template "_internal/opengraph.html" . }}
 
-    {{ partialCached "head/favicon" . }}
-    {{ partialCached "head/css" . }}
-    <!-- Headway App -->
-    <script>
-      var HW_config = {
-        selector: ".hw-changelog", // CSS selector where to inject the badge
-        account:  "76zaR7"
-      }
-    </script>
-    <script async src="//cdn.headwayapp.co/widget.js"></script>
-</head> 
+  {{ partialCached "head/favicon" . }}
+  {{ partialCached "head/css" . }}
+  <!-- Headway App -->
+  <script>
+    var HW_config = {
+      selector: ".hw-changelog", // CSS selector where to inject the badge
+      account: "76zaR7"
+    }
+  </script>
+  <script async src="//cdn.headwayapp.co/widget.js"></script>
+</head>
 
-<body>   
-  
+<body>
+
   {{ partial "nav.html" . }}
   {{ block "main" . }}
   {{ end }}
@@ -44,25 +45,15 @@
   <noscript><img src="https://api.simpleanalytics.io/hello.gif" alt=""></noscript>
   {{ if .IsHome}}
   <script type="application/javascript">
-      function geoip(json){
-          var userip      = document.getElementById("user_ip");
-          var countrycode = document.getElementById("user_countrycode");
-          userip.textContent      = json.ip;
-          countrycode.textContent = json.country_code;
-      }
+    function geoip(json) {
+      var userip = document.getElementById("user_ip");
+      var countrycode = document.getElementById("user_countrycode");
+      userip.textContent = json.ip;
+      countrycode.textContent = json.country_code;
+    }
   </script>
   <script async src="https://get.geojs.io/v1/ip/geo.js"></script>
   {{ end }}
 </body>
+
 </html>
-<!-- https://discourse.gohugo.io/t/implementing-breadcrumb-navigation-in-hugo/1048/38 -->
-{{ define "breadcrumb" }}
-  {{ if .currentPage.Parent }}
-    {{ template "breadcrumb" dict "currentPage" .currentPage.Parent }}
-  {{ end }}
-  {{ if eq .id .currentPage.UniqueID }}
-    <li class="is-active"><a href="#" aria-current="page">{{ if .currentPage.Params.short_title }}{{.currentPage.Params.short_title }}{{ else }}{{ .currentPage.Title }}{{ end }}</a></li>
-  {{ else }}
-    <li><a href="{{ .currentPage.URL }}">{{ if .currentPage.IsHome }}Home{{ else }}{{ if .currentPage.Params.short_title }}{{.currentPage.Params.short_title }}{{ else }}{{ .currentPage.Title }}{{ end }}{{ end }}</a></li>
-  {{ end }}
-{{ end }}
