@@ -81,3 +81,6 @@ typings/
 
 # CSS files that're built
 static/css
+
+# Keep VSCode
+!.vscode
