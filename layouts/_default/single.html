@@ -1,33 +1,37 @@
 {{ define "main" }}
-<header class="section pt-2">
-  <div class="container">
-    <div class="page-titles pb-1">
-      <h1 class="title">{{ .Title }}</h1>
-      <h2 class="subtitle">{{ .Params.description }}</h2>
-    </div>
-    <nav class="breadcrumb" aria-label="breadcrumbs">
-      {{ partial "breadcrumb" . }}
-    </nav>
-  </div>
-</header>
-<section class="section pt-0">
-  <div class="container">
-    <div class="tabs">
-      <ul>
-        {{ range where .Site.Pages "Section" .CurrentSection }}
-        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-        {{ end }}
-        <li><a href="#">General</a></li>
-        <li class="is-active"><a href="#">IP</a></li>
-        <li><a href="#">Country</a></li>
-        <li><a href="#">Geo</a></li>
-        <li><a href="#">PTR</a></li>
-      </ul>
-    </div>
-    <div class="content">
-      {{ .Content }}
+<div class="container">
+  <div class="columns is-gapless px-1 py-2">
+    <div class="column is-8">
+      <div class="page-titles pb-1">
+        <h1 class="title">{{ .Title }}</h1>
+        <h2 class="subtitle">{{ .Params.description }}</h2>
+      </div>
+      <nav class="breadcrumb" aria-label="breadcrumbs">
+        {{ partial "breadcrumb" . }}
+      </nav>
     </div>
   </div>
-</section>
+</div>
+<div class="container">
+  <div class="columns is-gapless">
+    <div class="column is-8">
+      <div class="tabs">
+        <ul>
+          {{ range where .Site.Pages "Section" .CurrentSection }}
+          <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+          {{ end }}
+          <li><a href="#">General</a></li>
+          <li class="is-active"><a href="#">IP</a></li>
+          <li><a href="#">Country</a></li>
+          <li><a href="#">Geo</a></li>
+          <li><a href="#">PTR</a></li>
+        </ul>
+      </div>
+      <div class="content px-1">
+        {{ .Content }}
+      </div>
+    </div>
+  </div>
+</div>
 
 {{ end }}
