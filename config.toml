@@ -18,6 +18,7 @@ description = "GeoJS is a highly available REST/JSON/JSONP IP Geolocation lookup
 # Code higlighting settings
 pygmentsCodefences = true
 pygmentsCodeFencesGuesSsyntax = false
+pygmentsUseClasses=true
 
 [params]
 RSSLink = "/index.xml"

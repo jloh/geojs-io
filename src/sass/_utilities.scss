@@ -1,0 +1,35 @@
+$util-versions: (padding: p, margin: m);
+
+@each $k,$v in $util-versions {
+  @for $i from 0 through 3 {
+    .#{$v}-#{$i} {
+      #{$k}: #{$i}rem !important;
+    }
+  
+    .#{$v}b-#{$i} {
+      #{$k}-bottom: #{$i}rem !important;
+    }
+  
+    .#{$v}l-#{$i} {
+      #{$k}-left: #{$i}rem !important;
+    }
+  
+    .#{$v}r-#{$i} {
+      #{$k}-right: #{$i}rem !important;
+    }
+  
+    .#{$v}t-#{$i} {
+      #{$k}-top: #{$i}rem !important;
+    }
+  
+    .#{$v}x-#{$i} {
+      $k-left: #{$i}rem !important;
+      $k-right: #{$i}rem !important;
+    }
+    
+    .#{$v}y-#{$i} {
+      $k-bottom: #{$i}rem !important;
+      $k-top: #{$i}rem !important;
+    }
+  }
+}
