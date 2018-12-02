@@ -1,36 +1,53 @@
 {{ define "main" }}
-        <!-- ******Header****** -->
-        <header id="header" class="header">
-            <div class="container">
-                <div class="branding">
-                    <h1 class="logo">
-                        <a href="/">
-                            <span aria-hidden="true" class="icon_documents_alt icon"></span>
-                            <span class="text-highlight">Geo</span><span class="text-bold">JS</span>
-                        </a>
-                        <span class="hw-changelog hw-changelog-page"></span>
-                    </h1>
-                </div><!--//branding-->
-                <ol class="breadcrumb">
-                  {{ template "breadcrumb" dict "currentPage" .Page "id" .UniqueID }}
-                </ol>
-            </div><!--//container-->
-        </header><!--//header-->
-        <section class="cards-section text-center">
-            <div class="container">
-                <h2 class="title">{{ .Title }}</h2>
-                <div class="intro">
-                    <p>{{ .Content }}</p>
-                </div><!--//intro-->
-                <div id="cards-wrapper" class="cards-wrapper row">
-                    {{ range .Data.Pages.ByWeight }} {{ partial "item" . }} {{ end }}
-                    {{ range $.Sections }}
-                      {{ range .Pages }}
-                         {{ partial "item" . }}
-                      {{ end }}
-                    {{ end }}
-                </div><!--//cards-->
-                
-            </div><!--//container-->
-        </section><!--//cards-section-->
+<!-- ******Header****** -->
+<header id="header" class="header">
+  <div class="container">
+    <div class="branding">
+      <h1 class="logo">
+        <a href="/">
+          <span aria-hidden="true" class="icon_documents_alt icon"></span>
+          <span class="text-highlight">Geo</span><span class="text-bold">JS</span>
+        </a>
+        <span class="hw-changelog hw-changelog-page"></span>
+      </h1>
+    </div>
+    <!--//branding-->
+    <nav class="breadcrumb" aria-label="breadcrumbs">
+      <ul>
+        {{ template "breadcrumb" dict "currentPage" .Page "id" .UniqueID }}
+      </ul>
+    </nav>
+  </div>
+  <!--//container-->
+</header>
+<!--//header-->
+<section class="cards-section text-center">
+  <div class="container">
+    <div class="tabs">
+      <ul>
+        {{ range where .Site.Pages "Section" .CurrentSection }}
+        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+        {{ end }}
+        <li><a>hello</a></li>
+      </ul>
+    </div>
+    <h2 class="title">{{ .Title }}</h2>
+    <div class="intro">
+      <p>{{ .Content }}</p>
+    </div>
+    <!--//intro-->
+    <div id="cards-wrapper" class="cards-wrapper row">
+      {{ range .Data.Pages.ByWeight }} {{ partial "item" . }} {{ end }}
+      {{ range $.Sections }}
+      {{ range .Pages }}
+      {{ partial "item" . }}
+      {{ end }}
+      {{ end }}
+    </div>
+    <!--//cards-->
+
+  </div>
+  <!--//container-->
+</section>
+<!--//cards-section-->
 {{ end }}

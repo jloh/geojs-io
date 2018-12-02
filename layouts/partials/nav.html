@@ -1,0 +1,35 @@
+<nav class="navbar has-shadow" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item has-text-grey-dark has-text-weight-bold is-size-4" href="/">
+      <img alt="GeoJS" src="/img/logo.png">
+    </a>
+    <div class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="topmenu-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+  </div>
+  <div class="navbar-menu" id="topmenu-nav">
+    <div class="navbar-start">
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" title="Docs">Docs</a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item">Endpoints</a>
+          <hr class="navbar-divider">
+          <div class="navbar-item">
+            Version 1
+          </div>
+        </div>
+      </div>
+      <a class="navbar-item" title="Blog">Blog</a>
+      <a class="navbar-item" title="Blog">App</a>
+      <a class="navbar-item" title="Blog">Contact</a>
+      <a class="navbar-item" title="Blog">Status</a>
+    </div>
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <p class="navbar-text navbar-right">Latest news: <a href="https://jloh.co{{ index .Site.Data.blog "url" }}" title="GeoJS blog: {{ index .Site.Data.blog "title" }}">{{ index .Site.Data.blog "title" }}</a></p>
+      </div>
+    </div>
+  </div>
+</nav>
