@@ -13,9 +13,7 @@
     </div>
     <!--//branding-->
     <nav class="breadcrumb" aria-label="breadcrumbs">
-      <ul>
-        {{ template "breadcrumb" dict "currentPage" .Page "id" .UniqueID }}
-      </ul>
+        {{ partial "breadcrumb" . }}
     </nav>
   </div>
   <!--//container-->
