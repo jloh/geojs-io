@@ -2,30 +2,16 @@
 <div class="container">
   <div class="columns is-gapless px-1 py-2">
     <div class="column is-8">
-      <div class="page-titles pb-1">
+      <div class="page-titles pb-1 has-text-centered">
         <h1 class="title">{{ .Title }}</h1>
         <h2 class="subtitle">{{ .Params.description }}</h2>
       </div>
-      <nav class="breadcrumb" aria-label="breadcrumbs">
-        {{ partial "breadcrumb" . }}
-      </nav>
     </div>
   </div>
 </div>
 <div class="container">
   <div class="columns is-gapless">
     <div class="column is-8">
-      <div class="tabs">
-        <ul>
-          {{ $curPage := . }}
-          {{ with .Parent }}
-          <li><a href="{{ .Permalink }}">Overview</a></li>
-          {{ end }}
-          {{ range .CurrentSection.Pages }}
-          <li{{ if eq $curPage.UniqueID .UniqueID }} class="is-active"{{ end }} ><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-          {{ end }}
-        </ul>
-      </div>
       <div class="content px-1">
         {{ .Content }}
       </div>

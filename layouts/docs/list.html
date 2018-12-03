@@ -17,6 +17,17 @@
 </header>
 <section class="cards-section text-center">
   <div class="container">
+    <div class="tabs">
+      <ul>
+        {{ $curPage := . }}
+        {{ with .Parent }}
+        <li class="is-active"><a href="{{ $curPage.Permalink }}">Overview</a></li>
+        {{ end }}
+        {{ range .CurrentSection.Pages }}
+        <li{{ if eq $curPage.UniqueID .UniqueID }} class="is-active" {{ end }}><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+        {{ end }}
+      </ul>
+    </div>
     <h2 class="title">{{ .Title }}</h2>
     <div class="intro">
       <p>{{ .Content }}</p>
