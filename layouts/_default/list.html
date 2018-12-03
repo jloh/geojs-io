@@ -13,7 +13,7 @@
     </div>
     <!--//branding-->
     <nav class="breadcrumb" aria-label="breadcrumbs">
-        {{ partial "breadcrumb" . }}
+      {{ partial "breadcrumb" . }}
     </nav>
   </div>
   <!--//container-->
@@ -23,10 +23,13 @@
   <div class="container">
     <div class="tabs">
       <ul>
-        {{ range where .Site.Pages "Section" .CurrentSection }}
-        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+        {{ $curPage := . }}
+        {{ with .Parent }}
+        <li class="is-active"><a href="{{ $curPage.Permalink }}">Overview</a></li>
         {{ end }}
-        <li><a>hello</a></li>
+        {{ range .CurrentSection.Pages }}
+        <li{{ if eq $curPage.UniqueID .UniqueID }} class="is-active" {{ end }}><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+        {{ end }}
       </ul>
     </div>
     <h2 class="title">{{ .Title }}</h2>

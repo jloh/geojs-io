@@ -17,12 +17,12 @@
     <div class="column is-8">
       <div class="tabs">
         <ul>
-          {{ $curPage := .UniqueID }}
+          {{ $curPage := . }}
           {{ with .Parent }}
           <li><a href="{{ .Permalink }}">Overview</a></li>
           {{ end }}
           {{ range .CurrentSection.Pages }}
-          <li{{ if eq $curPage .UniqueID }} class="is-active"{{ end }} ><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+          <li{{ if eq $curPage.UniqueID .UniqueID }} class="is-active"{{ end }} ><a href="{{ .Permalink }}">{{ .Title }}</a></li>
           {{ end }}
         </ul>
       </div>
