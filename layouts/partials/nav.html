@@ -12,24 +12,25 @@
     </div>
     <div class="navbar-menu" id="topmenu-nav">
       <div class="navbar-start">
+        {{ range .Site.Menus.main }}
+        {{ if .HasChildren }}
         <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link" title="Docs">Docs</a>
+          <a class="navbar-link" title="{{ .Name }}" href="{{ .URL }}">{{ .Name }}</a>
           <div class="navbar-dropdown">
-            <a class="navbar-item">Endpoints</a>
-            <hr class="navbar-divider">
-            <div class="navbar-item">
-              Version 1
-            </div>
+            {{ range .Children }}
+            <a class="navbar-item" title="{{ .Title }}" href="{{ .URL }}">{{ .Title }}</a>
+            {{ end }}
           </div>
         </div>
-        <a class="navbar-item" title="Blog">Blog</a>
-        <a class="navbar-item" title="Blog">App</a>
-        <a class="navbar-item" title="Blog">Contact</a>
-        <a class="navbar-item" title="Blog">Status</a>
+        {{ else }}
+        <a class="navbar-item" title="{{ .Name }}" href="{{ .URL }}">{{ .Name }}</a>
+        {{ end }}
+        {{ end }}
       </div>
       <div class="navbar-end">
         <div class="navbar-item">
-          <p class="navbar-text navbar-right">Latest news: <a href="https://jloh.co{{ index .Site.Data.blog "url" }}" title="GeoJS blog: {{ index .Site.Data.blog "title" }}">{{ index .Site.Data.blog "title" }}</a></p>
+          <p class="navbar-text navbar-right">Latest news: <a href="https://jloh.co{{ index .Site.Data.blog "url" }}"
+              title="{{ index .Site.Data.blog "title" }} posted on the GeoJS blog">{{ index .Site.Data.blog "title" }}</a></p>
         </div>
       </div>
     </div>

@@ -1,7 +1,6 @@
 ---
 description: "Information that applied to the whole service"
 title: General
-weight: 100
 draft: false
 bref: "Service wide information"
 toc: false

@@ -1,13 +1,7 @@
 ---
 description: "Slack app setup and usage"
 title: Slack App
-weight: 110
 draft: false
-bref: "Slack setup and usage"
-toc: "false"
-icon: slack
-homepage: false
-card_colour: blue
 Aliases:
   - "/docs/chatops/slack/"
 ---

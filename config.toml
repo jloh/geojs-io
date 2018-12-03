@@ -10,6 +10,8 @@ enableRobotsTXT = true
 # Don't do alias assets since Netlify handles that for us
 disableAliases = true
 
+sectionPagesMenu = "main"
+
 # Enable gitinfo
 enableGitInfo = true
 
@@ -45,3 +47,21 @@ mediatype = "text/netlify"
 baseName = "_headers"
 isPlainText = true
 notAlternative = true
+
+# Menu items that aren't in frontmatter
+[menu]
+
+  [[menu.main]]
+    name = "Blog"
+    url = "https://jloh.co/tag/geojs/"
+    weight = 200
+
+  [[menu.main]]
+    name = "App"
+    url = "https://app.geojs.io/"
+    weight = 250
+
+  [[menu.main]]
+    name = "Status"
+    url = "https://status.geojs.io/"
+    weight = 300

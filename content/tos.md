@@ -1,6 +1,5 @@
 ---
 title: Terms of Service
-weight: 110
 homepage: false
 draft: false
 lastupdate: "false"

@@ -1,6 +1,5 @@
 ---
 title: GeoJS
-weight: 10
 description: "REST/JSON/JSONP GeoIP API"
 ---
 

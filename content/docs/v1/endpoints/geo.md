@@ -1,7 +1,6 @@
 ---
 description: "Contains all available geographical information about an IP"
 title: Geo
-weight: 110
 draft: false
 toc: true
 ---

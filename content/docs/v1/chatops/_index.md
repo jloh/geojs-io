@@ -2,11 +2,11 @@
 date: "2017-04-10T16:41:54+01:00"
 description: "ChatOps setup and usage"
 title: ChatOps
-weight: 110
 draft: false
-bref: "ChatOps setup and usage"
-toc: true
-icon: comments-o
+menu:
+  main:
+    parent: Docs
+    name: ChatOps
 Aliases:
   - "/docs/chatops/"
 ---
