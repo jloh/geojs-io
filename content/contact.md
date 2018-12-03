@@ -1,10 +1,10 @@
 ---
 title: Contact
-weight: 110
-homepage: false
 draft: false
-lastupdate: "false"
-toc: false
+menu:
+  main:
+    title: Contact
+    weight: 250
 ---
 
 I can be contacted at `contact @ geojs . io`, through the [public Gitter room](https://gitter.im/jloh/geojs) or using the contact form!
@@ -30,7 +30,9 @@ I can be contacted at `contact @ geojs . io`, through the [public Gitter room](h
       <textarea class="textarea" rows="3" name="Message" id="message" placeholder="Message"></textarea>
     </div>
   </div>
-  <div netlify-recaptcha></div>
+  <div class="field">
+    <div netlify-recaptcha></div>
+  </div>
   <div class="field">
     <div class="field-label">
       <!-- Left empty for spacing -->
