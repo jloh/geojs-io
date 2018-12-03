@@ -17,14 +17,13 @@
     <div class="column is-8">
       <div class="tabs">
         <ul>
-          {{ range where .Site.Pages "Section" .CurrentSection }}
-          <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+          {{ $curPage := .UniqueID }}
+          {{ with .Parent }}
+          <li><a href="{{ .Permalink }}">Overview</a></li>
           {{ end }}
-          <li><a href="#">General</a></li>
-          <li class="is-active"><a href="#">IP</a></li>
-          <li><a href="#">Country</a></li>
-          <li><a href="#">Geo</a></li>
-          <li><a href="#">PTR</a></li>
+          {{ range .CurrentSection.Pages }}
+          <li{{ if eq $curPage .UniqueID }} class="is-active"{{ end }} ><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+          {{ end }}
         </ul>
       </div>
       <div class="content px-1">
