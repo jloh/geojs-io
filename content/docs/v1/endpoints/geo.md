@@ -12,28 +12,24 @@ This endpoint mainly contains geographical information about an IP, such as its 
 
 ### URIs
 
-<div class="table-container">
-{{% md %}}
+{{% table %}}
 | Type  | URI |
 | ----- | --- |
 | JSON  | `https://get.geojs.io/v1/ip/geo.json` `https://get.geojs.io/v1/ip/geo/{ip address}.json` |
 | JSONP | `https://get.geojs.io/v1/ip/geo.js` `https://get.geojs.io/v1/ip/geo/{ip address}.js` |
 
-{{% /md %}}
-</div>
+{{% /table %}}
 
 ### Query Parameters
 
-<div class="table-container">
-{{% md %}}
+{{% table %}}
 
 | Paramater  | Default | Description                              | Endpoint        |
 | ---------- | ------- | ---------------------------------------- | --------------- |
 | `ip`       | None    | Allows searching of multiple IPs at once | All             |
 | `callback` | `geoip` | JSONP callback                           | `/v1/ip/geo.js` |
 
-{{% /md %}}
-</div>
+{{% /table %}}
 
 ## Examples
 
