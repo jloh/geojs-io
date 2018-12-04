@@ -22,7 +22,7 @@
           <li><a href="{{ .Permalink }}">Overview</a></li>
           {{ end }}
           {{ range .CurrentSection.Pages }}
-          <li{{ if eq $curPage $ }} class="is-active"{{ end }} ><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+          <li{{ if eq $curPage . }} class="is-active"{{ end }} ><a href="{{ .Permalink }}">{{ .Title }}</a></li>
           {{ end }}
         </ul>
       </div>
