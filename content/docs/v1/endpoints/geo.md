@@ -2,7 +2,6 @@
 description: "Contains all available geographical information about an IP"
 title: Geo
 draft: false
-toc: true
 ---
 
 Unlike other endpoints the Geo endpoint doesn't have a text based version, it simply contains too much information to be useful as plain text. If people think otherwise, please reach out and let me know.

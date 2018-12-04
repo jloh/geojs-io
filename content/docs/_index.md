@@ -1,6 +1,7 @@
 ---
 title: Documentation
 short_title: Docs
+draft: false
 menu:
   main:
     name: Docs

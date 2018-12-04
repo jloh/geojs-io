@@ -1,6 +1,7 @@
 ---
 title: GeoJS
 description: "REST/JSON/JSONP GeoIP API"
+draft: false
 ---
 
 <p>Checkout the text below, its generated on the fly by GeoJS itself.</p>
