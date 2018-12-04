@@ -1,5 +1,5 @@
 ---
-description: "Information that applied to the whole service"
+description: "Information that applies to the whole service"
 title: General
 draft: false
 menu:
