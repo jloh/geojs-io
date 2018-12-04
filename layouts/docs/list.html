@@ -1,45 +1,43 @@
 {{ define "main" }}
-<header id="header" class="header">
-  <div class="container">
-    <div class="branding">
-      <h1 class="logo">
-        <a href="/">
-          <span aria-hidden="true" class="icon_documents_alt icon"></span>
-          <span class="text-highlight">Geo</span><span class="text-bold">JS</span>
-        </a>
-        <span class="hw-changelog hw-changelog-page"></span>
-      </h1>
-    </div>
-    <nav class="breadcrumb" aria-label="breadcrumbs">
-      {{ partial "breadcrumb" . }}
-    </nav>
-  </div>
-</header>
-<section class="cards-section text-center">
-  <div class="container">
-    <div class="tabs">
-      <ul>
-        {{ $curPage := . }}
-        {{ with .Parent }}
-        <li class="is-active"><a href="{{ $curPage.Permalink }}">Overview</a></li>
-        {{ end }}
-        {{ range .CurrentSection.Pages }}
-        <li{{ if eq $curPage.UniqueID .UniqueID }} class="is-active" {{ end }}><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-        {{ end }}
-      </ul>
-    </div>
-    <h2 class="title">{{ .Title }}</h2>
-    <div class="intro">
-      <p>{{ .Content }}</p>
-    </div>
-    <div id="cards-wrapper" class="cards-wrapper row">
-      {{ range .Data.Pages.ByWeight }} {{ partial "item" . }} {{ end }}
-      {{ range $.Sections }}
-      {{ range .Pages }}
-      {{ partial "item" . }}
-      {{ end }}
-      {{ end }}
+<div class="container">
+  <div class="columns is-centered is-gapless px-1 py-2">
+    <div class="column is-8">
+      <div class="page-titles pb-1">
+        <h1 class="title">{{ .Title }}</h1>
+        <h2 class="subtitle">{{ .Params.description }}</h2>
+      </div>
+      <nav class="breadcrumb" aria-label="breadcrumbs">
+        {{ partial "breadcrumb" . }}
+      </nav>
     </div>
   </div>
-</section>
+</div>
+<div class="container">
+  <div class="columns is-centered is-gapless">
+    <div class="column is-8">
+      <div class="tabs">
+        <ul>
+          {{ $curPage := . }}
+          {{ with .Parent }}
+          <li {{ if eq $curPage $ }} class="is-active" {{ end }}><a href="{{ .Permalink }}">Overview</a></li>
+          {{ end }}
+          {{ range .CurrentSection.Pages }}
+          <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+          {{ end }}
+        </ul>
+      </div>
+      <div class="content px-1">
+        {{ .Content }}
+      </div>
+      <div class="tile is-ancestor">
+        {{ range .Data.Pages.ByWeight }}
+        {{ partial "tile" . }}
+        {{ end }}
+        {{ range $.Sections }}
+        {{ partial "tile" . }}
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</div>
 {{ end }}
