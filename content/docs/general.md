@@ -2,9 +2,11 @@
 description: "Information that applied to the whole service"
 title: General
 draft: false
-bref: "Service wide information"
-toc: false
-card_colour: blue
+menu:
+  main:
+    name: Overview
+    parent: Docs
+    weight: 100
 ---
 
 ## Domains

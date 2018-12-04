@@ -10,8 +10,6 @@ enableRobotsTXT = true
 # Don't do alias assets since Netlify handles that for us
 disableAliases = true
 
-sectionPagesMenu = "main"
-
 # Enable gitinfo
 enableGitInfo = true
 
