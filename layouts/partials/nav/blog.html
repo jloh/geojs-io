@@ -1,9 +1,5 @@
 {{- $blog_url := ( printf "%s/ghost/api/v0.1/posts/?%s" $.Site.Params.blog_domain ( querify "limit" 1 "filter" $.Site.Params.blog_filter "client_id" "ghost-frontend" "client_secret" (getenv "GHOST_SECRET" ) )) -}}
 {{- $blog_posts := getJSON $blog_url -}}
-<div class="navbar-end">
-  <div class="navbar-item">
-    {{- range first 1 $blog_posts.posts }}
-     <p class="navbar-text navbar-right">Latest news: <a href="https://jloh.co{{ .url }}">{{ .title }}</a></p>
-    {{ end -}}
-  </div>
-</div>
+{{- range first 1 $blog_posts.posts -}}
+<p class="navbar-text navbar-right">Latest news: <a href="https://jloh.co{{ .url }}">{{ .title }}</a></p>
+{{- end -}}
