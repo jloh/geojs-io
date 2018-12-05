@@ -21,12 +21,14 @@ pygmentsCodeFencesGuesSsyntax = false
 pygmentsUseClasses=true
 
 [params]
-RSSLink = "/index.xml"
-author  = "jloh"
-github  = "jloh"
-twitter = "itsjloh"
-email   = "contact@geojs.io"
-repo    = "https://github.com/jloh/geojs-io"
+RSSLink     = "/index.xml"
+author      = "jloh"
+github      = "jloh"
+twitter     = "itsjloh"
+email       = "contact@geojs.io"
+repo        = "https://github.com/jloh/geojs-io"
+blog_domain = "https://jloh.ghost.io"
+blog_filter = "tag:geojs"
 
 [outputs]
 home = [ "HTML", "RSS", "REDIRECTS", "HEADERS" ]

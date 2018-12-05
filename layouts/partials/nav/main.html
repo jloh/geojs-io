@@ -29,8 +29,7 @@
       </div>
       <div class="navbar-end">
         <div class="navbar-item">
-          <p class="navbar-text navbar-right">Latest news: <a href="https://jloh.co{{ index .Site.Data.blog "url" }}"
-              title="{{ index .Site.Data.blog "title" }} posted on the GeoJS blog">{{ index .Site.Data.blog "title" }}</a></p>
+          {{ partialCached "nav/blog" . }}
         </div>
       </div>
     </div>

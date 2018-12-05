@@ -34,10 +34,10 @@
 
 <body>
 
-  {{ partial "nav" . }}
+  {{ partial "nav/main" . }}
   {{ block "main" . }}
   {{ end }}
-  {{ partialCached "footer.html" . }}
+  {{ partialCached "footer" . }}
 
   <!-- Main Javascript -->
   <script src="{{ print "js/" ( index .Site.Data.js "menu.js" ) | relURL }}"></script>
