@@ -10,7 +10,3 @@ menu:
 aliases:
   - "/docs/endpoints/"
 ---
-
-Endpoints doco
-
-[Geo](./geo)
