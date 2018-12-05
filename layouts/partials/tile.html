@@ -1,6 +1,18 @@
-<div class="tile is-parent">
-    <a class="tile is-child box" href="{{ .URL }}">
-      <p class="title">{{ .Title }}</p>
-      <p class="subtitle">{{ .Description }}</p>
-    </a>
-  </div>
+<div class="column is-6">
+  <a class="box" href="{{ .URL }}">
+    <p class="title">{{ .Title }}</p>
+    {{ with .Params.features }}
+      <div class="field is-grouped is-grouped-multiline">
+        {{ range $k,$v := . }}
+          <div class="control">
+            <div class="tags has-addons">
+              <span class="tag">{{ $k }}</span>
+              <span class="tag {{ if $v }}is-success{{ else }}is-danger{{ end }}">{{ if $v }}yes{{ else }}no{{ end }}</span>
+            </div>
+          </div>
+        {{ end }}
+      </div>
+    {{ end }}
+    <p class="subtitle">{{ .Description }}</p>
+  </a>
+</div>
