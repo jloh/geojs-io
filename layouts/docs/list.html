@@ -29,7 +29,7 @@
       <div class="content px-1">
         {{ .Content }}
       </div>
-      <div class="columns is-multiline px-1">
+      <div class="columns is-multiline is-gapless">
         {{ range .Data.Pages.ByWeight }}
         {{ partial "tile" . }}
         {{ end }}
