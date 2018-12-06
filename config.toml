@@ -1,4 +1,4 @@
-baseurl = "https://www.geojs.io"
+baseurl = "https://geojs.io"
 languageCode = "en-AU"
 title = "GeoJS · REST/JSON/JSONP GeoIP API"
 metadataformat = "yaml"
