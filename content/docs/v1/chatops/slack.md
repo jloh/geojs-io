@@ -2,6 +2,7 @@
 description: "Slack app setup and usage"
 title: Slack App
 draft: false
+homepage: false
 Aliases:
   - "/docs/chatops/slack/"
 ---

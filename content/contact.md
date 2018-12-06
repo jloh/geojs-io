@@ -1,6 +1,7 @@
 ---
 title: Contact
 draft: false
+homepage: false
 no_content: true
 menu:
   main:

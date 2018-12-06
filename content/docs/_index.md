@@ -2,6 +2,7 @@
 title: Documentation
 short_title: Docs
 draft: false
+homepage: false
 menu:
   main:
     name: Docs

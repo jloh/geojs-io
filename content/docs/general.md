@@ -2,6 +2,7 @@
 description: "Information that applies to the whole service"
 title: General
 draft: false
+homepage: false
 menu:
   main:
     name: Overview
