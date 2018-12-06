@@ -8,9 +8,9 @@ features:
   JSONP: Yes
 ---
 
-Unlike other endpoints the Geo endpoint doesn't have a text based version, it simply contains too much information to be useful as plain text. If people think otherwise, please reach out and let me know.
+Unlike other endpoints the Geo endpoint doesn't have a text based version, it simply contains too much information to be useful. If people think otherwise, please reach out and let me know.
 
-This endpoint mainly contains geographical information about an IP, such as its latitude and longitude, along with the owning (ASN) organisiation.
+This endpoint contains geographical information about an IP, such as its latitude and longitude, along with the owning (ASN) organisiation.
 
 ### URIs
 
@@ -30,6 +30,29 @@ This endpoint mainly contains geographical information about an IP, such as its 
 | ---------- | ------- | ---------------------------------------- | --------------- |
 | `ip`       | None    | Allows searching of multiple IPs at once | All             |
 | `callback` | `geoip` | JSONP callback                           | `/v1/ip/geo.js` |
+
+{{% /table %}}
+
+## Properties
+
+{{% table %}}
+
+| Property            | Type | Description | Example |
+| ------------------- | ---- | ----------- | ------- |
+| `ip`                | String  | Requested IP                | `8.8.8.8`   |
+| `country`           | String  | Country name in English     | `Australia` |
+| `country_code`      | String  | Two letter country code     | `AU`        |
+| `country_code3`     | String  | Three letter country code   | `AUS`       |
+| `continent_code`    | String  | Three letter continent code | `OC`        |
+| `city`              | String  | City name in English        | `Mountain View` |
+| `region`            | String  | Subdivison of the country the IP is within (State, region etc) | `California` |
+| `latitude`          | String  | IP latitude (Note: this is a string due to historic reasons)   | `37.4056`   |
+| `longitude`         | String  | IP longitude (Note: this is a string due to historic reasons)  | `-122.0775` |
+| `accuracy`          | Integer | Radius in kilometers around the specified location where the IP address is likely to be | `5` |
+| `timezone`          | String  | Time zone as specified by the [IANA Time Zone Database](http://www.iana.org/time-zones) | `America/Los_Angeles`|
+| `organization`      | String  | The organization that the IP is registered to (Note: `Unknown` is returned when this field is unknown) | `Google LLC` |
+| `asn`               | Integer | The [autonomous system number](http://en.wikipedia.org/wiki/Autonomous_system_(Internet)) associated with the IP address (Note: `64512` is returned when the ASN is unknown) | `15169` |
+| `organization_name` | String  | The ASN and organization field combined (Note: this field is depricated) | `AS15169 Google LLC` |
 
 {{% /table %}}
 
