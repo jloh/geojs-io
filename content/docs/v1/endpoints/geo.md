@@ -12,17 +12,17 @@ Unlike other endpoints the Geo endpoint doesn't have a text based version, it si
 
 This endpoint contains geographical information about an IP, such as its latitude and longitude, along with the owning (ASN) organisiation.
 
-### URIs
+## URIs
 
 {{% table %}}
 | Type  | URI |
 | ----- | --- |
-| JSON  | `https://get.geojs.io/v1/ip/geo.json` `https://get.geojs.io/v1/ip/geo/{ip address}.json` |
-| JSONP | `https://get.geojs.io/v1/ip/geo.js` `https://get.geojs.io/v1/ip/geo/{ip address}.js` |
+| JSON  | `https://get.geojs.io/v1/ip/geo.json` <br> `https://get.geojs.io/v1/ip/geo/{ip address}.json` |
+| JSONP | `https://get.geojs.io/v1/ip/geo.js` <br> `https://get.geojs.io/v1/ip/geo/{ip address}.js` |
 
 {{% /table %}}
 
-### Query Parameters
+## Query Parameters
 
 {{% table %}}
 
