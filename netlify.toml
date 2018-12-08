@@ -15,5 +15,5 @@
 
 [context.branch-deploy]
   command = "npx gulp && hugo -b $DEPLOY_PRIME_URL"
-[context.deploy-preview.environment]
+[context.branch-deploy.environment]
   HUGO_VERSION = "0.52"
