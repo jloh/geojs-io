@@ -1,6 +1,7 @@
 // Bulma fiddles with a whole lot of styles so reset them to fix it
 // https://github.com/jgthms/bulma/issues/1708
-.content .tag, .content .number {
+.content .tag,
+.content .number {
   display: inline;
   padding: inherit;
   font-size: inherit;
@@ -12,4 +13,15 @@
   white-space: inherit;
   background: inherit;
   margin: inherit;
+}
+
+// Override selection colour
+::selection {
+  text-shadow: none;
+  background: #D6EDFF;
+}
+
+::-moz-selection {
+  text-shadow: none;
+  background: #D6EDFF;
 }
