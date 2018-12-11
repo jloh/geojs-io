@@ -10,3 +10,5 @@ menu:
 Aliases:
   - "/docs/chatops/"
 ---
+
+Our ChatOps integrations allow you to lookup IP information from the comfort of chat. You can see our current integrations below but if you feel something is missing please don't hesitate to [reach out](/contact/).
