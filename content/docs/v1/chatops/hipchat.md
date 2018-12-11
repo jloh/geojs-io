@@ -1,5 +1,5 @@
 ---
-description: "HipChat App setup and usage"
+description: "HipChat app setup and usage"
 title: HipChat
 draft: false
 homepage: false
