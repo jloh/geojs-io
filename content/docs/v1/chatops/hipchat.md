@@ -5,6 +5,12 @@ draft: false
 homepage: false
 ---
 
+{{< message title="Deprecation Warning" type="danger" >}}
+
+TODO
+
+{{< /message >}}
+
 HipChat integration is a major work in progress, I haven't published it to their Marketplace at this stage.
 
 ## Installation
