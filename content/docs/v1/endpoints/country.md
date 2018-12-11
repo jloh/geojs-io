@@ -51,6 +51,32 @@ This endpoint returns the country of the requesting IP. It has multiple plain te
 
 ### Plain text
 
+This endpoint features two plain text versions. One returns the two letter country code, the other returns the full country name in English.
+
+The below two examples are from the normal plain text endpoint (`/v1/ip/country`). The first is hitting the endpoint without any args, the second is specifying two IP args (`/v1/ip/country?ip=8.8.8.8,198.35.26.96`):
+
+```text
+US
+```
+
+```text
+8.8.8.8: US
+198.35.26.96: US
+```
+
+The below two examples are the same as the above, but are hitting the _full_ URL endpoint (`/v1/ip/country/full`):
+
+```text
+United States
+```
+
+And multiple IP lookups:
+
+```text
+8.8.8.8: United States
+198.35.26.96: United States
+```
+
 ### JSON
 
 ```json
