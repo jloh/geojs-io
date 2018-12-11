@@ -1,0 +1,8 @@
+<article class="message{{ with .Get "type" }} is-{{ . }}{{ end }}">
+  <div class="message-header">
+    <p>{{ .Get "title" }}</p>
+  </div>
+  <div class="message-body">
+    {{ .Inner | markdownify }}
+  </div>
+</article>
