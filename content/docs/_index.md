@@ -9,4 +9,4 @@ menu:
     weight: 50
 ---
 
-Documentation for the usage of our API and integrations
+Documentation for the usage of our API and integrations.

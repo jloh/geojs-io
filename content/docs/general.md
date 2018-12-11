@@ -16,10 +16,12 @@ GeoJS is available on https://get.getjs.io/. The `HTTP` version redirects to the
 
 IPv6 and IPv4 only endpoints are available on https://ipv6.geojs.io/ and https://ipv4.geojs.io/ respectively.
 
+Just hitting https://get.geojs.io/ returns some plain text information about your IP, try it out!
+
 ## Rate Limits
 
 As it currently stands GeoJS has no rate limits and doesn't require any to be implemented. Should rate limits be required advanced warning will be given.
 
 ## Endpoints
 
-Currently GeoJS only has our [IP endpoint](/docs/v1/endpoints/) and our [ChatOps](/docs/v1/chatops/) integration.
+Currently GeoJS only has our [IP endpoint](/docs/endpoints/) and our [ChatOps](/docs/chatops/) integration.
