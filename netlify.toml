@@ -3,10 +3,10 @@
   HUGO_VERSION = "0.52"
 
 [context.production]
-  command = "npx gulp && hugo --gc --minify"
+  command = "npx gulp && hugo --gc"
 [context.production.environment]
   HUGO_VERSION = "0.52"
-  HUGO_ENV     = "production"
+  HUGO_ENV     = "PRODUCTION"
 
 [context.deploy-preview]
   command = "npx gulp && hugo -b $DEPLOY_PRIME_URL"
