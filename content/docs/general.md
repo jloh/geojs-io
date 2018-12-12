@@ -10,7 +10,7 @@ card_colour: blue
 
 ## Domains
 
-GeoJS is available on https://get.getjs.io/. The `HTTP` version redirects to the `HTTPS` version, as such a non-HTTPS version is not available. There is no plan to ever change this.
+GeoJS is available on https://get.geojs.io/. The `HTTP` version redirects to the `HTTPS` version, as such a non-HTTPS version is not available. There is no plan to ever change this.
 
 IPv6 and IPv4 only endpoints are available on https://ipv6.geojs.io/ and https://ipv4.geojs.io/ respectively.
 
