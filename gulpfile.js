@@ -1,41 +1,63 @@
-var gulp      = require("gulp");
-var uglify    = require('gulp-uglify');
-var concatJS  = require('gulp-concat');
-var concatCSS = require('gulp-concat-css');
-var cleancss  = require('gulp-clean-css');
-var hash      = require("gulp-hash");
-var del       = require("del");
+'use strict';
+
+var gulp        = require('gulp');
+var uglifyjs    = require('terser');
+var gutil       = require('gulp-util');
+var sass        = require('gulp-sass');
+var hash        = require('gulp-hash');
+var concat      = require('gulp-concat');
+var cleanCSS    = require('gulp-clean-css');
+var sassUnicode = require('gulp-sass-unicode');
+var composer    = require('gulp-uglify/composer');
+
+var del         = require('del');
+var fs          = require('fs');
+
+// Use a custom uglifyjs instance that supports ES6
+var uglify = composer(uglifyjs, console);
+
+var paths = {
+  styles: {
+    src: 'src/sass/main.scss',
+    dest: 'static/css/',
+    watch: 'src/sass/**/*.scss',
+    hash: 'data/css.json'
+  },
+  scripts: {
+    src: 'src/js/*.js',
+    dest: 'static/js/',
+    hash: 'data/js.json'
+  }
+};
+
+gulp.task('sass', function () {
+  del([paths.styles.dest + "*.css"])
+  return gulp.src('./src/sass/main.scss')
+    .pipe(sass({outputStyle: 'compressed'}))
+    .pipe(sassUnicode())
+    .pipe(hash())
+    .pipe(gulp.dest(paths.styles.dest))
+    // Create hash map
+    .pipe(hash.manifest(paths.styles.hash))
+    // Put the map into the data directory for hugo to find
+    .pipe(gulp.dest("./"))
+});
 
 // Minify our JS files
-gulp.task('js-compress', function () {
-  del(['static/js/*.js'])
-  gulp.src([
-    'themes/kube/static/js/jquery-2.1.4.min.js',
-    'themes/kube/static/js/tocbot.min.js',
-    'themes/kube/static/js/kube.js'
-  ])
-  .pipe(concatJS('main.js'))
+gulp.task('scripts', function () {
+  del([paths.scripts.dest + "*.js"]);
+  return gulp.src(paths.scripts.src)
   .pipe(uglify())
+  .on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
   .pipe(hash())
-  .pipe(gulp.dest('static/js/'))
-  .pipe(hash.manifest('hash.json'))
-  .pipe(gulp.dest('data/js'))
+  .pipe(gulp.dest(paths.scripts.dest))
+  .pipe(hash.manifest(paths.scripts.hash))
+  .pipe(gulp.dest('.'));
+})
+
+gulp.task('watch', ['sass', 'scripts'], function () {
+  gulp.watch(paths.styles.watch, ['sass']);
+  gulp.watch(paths.scripts.src, ['scripts']);
 });
 
-// Minify CSS
-gulp.task('css-compress', function () {
-  del(['static/css/*.css'])
-  gulp.src([
-    'themes/kube/static/css/font.css',
-    'themes/kube/static/css/kube.css',
-    'src/css/master.css'
-  ])
-  .pipe(concatCSS("main.css"))
-  .pipe(cleancss())
-  .pipe(hash())
-  .pipe(gulp.dest('static/css/'))
-  .pipe(hash.manifest('hash.json'))
-  .pipe(gulp.dest('data/css/'))
-});
-
-gulp.task('default', ['js-compress', 'css-compress'])
+gulp.task('default', ['sass', 'scripts'])

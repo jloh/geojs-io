@@ -1,11 +1,13 @@
 ---
-description: "Information that applied to the whole service"
+description: "Information that applies to the whole service"
 title: General
-weight: 100
 draft: false
-bref: "Service wide information"
-toc: false
-card_colour: blue
+homepage: false
+menu:
+  main:
+    name: Overview
+    parent: Docs
+    weight: 100
 ---
 
 ## Domains
@@ -14,10 +16,12 @@ GeoJS is available on https://get.geojs.io/. The `HTTP` version redirects to the
 
 IPv6 and IPv4 only endpoints are available on https://ipv6.geojs.io/ and https://ipv4.geojs.io/ respectively.
 
+Just hitting https://get.geojs.io/ returns some plain text information about your IP, try it out!
+
 ## Rate Limits
 
-As it currently stands GeoJS has no rate limits and doesn't require any to be implemented. Should rate limits be required advanced warning will be given.
+As it currently stands GeoJS has no rate limits and doesn't require any to be implemented. Should rate limits be required advanced warning will be given where possible.
 
 ## Endpoints
 
-Currently GeoJS only has our [IP endpoint](/docs/v1/endpoints/) and our [ChatOps](/docs/v1/chatops/) integration.
+Our endpoint documentation is [over here](/docs/endpoints/).

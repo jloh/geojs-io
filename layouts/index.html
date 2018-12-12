@@ -1,62 +1,83 @@
 {{ define "main" }}
-        <!-- ******Header****** -->
-        <header class="header text-center">
-            <div class="container">
-                <div class="branding">
-                    <h1 class="logo">
-                        <span class="hw-changelog"></span>
-                        <span aria-hidden="true" class="icon_documents_alt icon" style="color: #58bbee;"></span>
-			<span class="text-highlight">Geo</span><span class="text-bold">JS</span>
-                    </h1>
-                </div><!--//branding-->
-                <div class="tagline">
-                    <p>Highly available REST/JSON/JSONP IP Geolocation lookup API</p>
-                    <p>Designed with <i class="fa fa-heart"></i> for developers</p>
-                </div><!--//tagline-->
-                <div class="social-container">
-                    <div class="slack-button">
-                        <a href="https://slack.com/oauth/authorize?&client_id=159217363895.234425956290&scope=commands"><img alt="Add to Slack" height="40" width="139" src="https://platform.slack-edge.com/img/add_to_slack.png" srcset="https://platform.slack-edge.com/img/add_to_slack.png 1x, https://platform.slack-edge.com/img/add_to_slack@2x.png 2x" /></a>
-                    </div><!--//tweet-->
-                    <div class="hw-changelog" ></div>            
-                 </div><!--//social-container-->
-            </div><!--//container-->
-        </header><!--//header-->
-        
-        <section class="cards-section text-center">
-            <div class="container">
-                <div class="row info">
-                    <h2 class="title">Packed full of features</h2>
-                    <ul class="col-md-6 list-unstyled">
-                      <li>HTTPS only</li>
-                      <li>Multiple formats</li>
-                      <li>Highly available and geo routed</li>
-                    </ul>
-                    <ul class="col-md-6 list-unstyled">
-                      <li>IPv4 and IPv6</li>
-                      <li>No rate limits (yet)</li>
-                      <li>Cross-origin resource sharing (CORS)</li>
-                    </ul>
-                    <p>And most importantly, <a href="/docs/chatops/" title="GeoJS ChatOps integration">ChatOps integration</a>. Lookup IPs from the comfort of chat.
-                </div>
-                <h2 class="title">Getting started is easy!</h2>
-                <div class="intro">
-                    {{ .Content }}
-                </div><!--//intro-->
-                <div id="cards-wrapper" class="cards-wrapper row">
-                    <h2 class="title">Documentation</h2>
-                    {{ range (where .Paginator.Pages.ByWeight ".Params.homepage" "!=" "false")}} {{ partial "item" . }} {{ end }}
-                </div><!--//cards-->
-		<div class="row info">
-                    <h2 class="title">Sponsors</h2>
-                    <p>GeoJS is proudly powered by the DigitalOcean cloud. Use my <a href="https://m.do.co/c/2c9ab4daaa8d" title="DigitalOcean" >referral link</a> to get $10 free credit upon signup.
-                    <a href="https://www.digitalocean.com" title="DigitalOcean" ><img src="https://geojs.io/img/DO_Logo_horizontal_blue.svg" style="max-width: 450px; margin-top: 15px;"></img></a>
-                </div>
-                <div class="row info">
-                    <h2 class="title">Notes & Acknowledgements</h2>
-                    <p>I'd like to thank <a href="http://www.telize.com/" title="Telize">Telize</a> for inspiring me to create this and MaxMind, as all GeoIP data is sourced from their GeoLite database, available at maxmind.com.</p>
-                    <p>GeoJS is made with <i class="fa fa-heart"></i> by <a href="https://jloh.co" title="James Loh">jloh</a>. I can be foud online at <a href="https://jloh.co/l/blog" title="James' blog">my blog</a>, <a href="https://jloh.co/l/twitter" title="James on Twitter">Twitter</a>, <a href="https://jloh.co/l/github" title="James on GitHub">GitHub</a> and <a href="https://jloh.co/l/keybase" title="James on Keybase">Keybase</a>.</p>
-                </div>
-                
-            </div><!--//container-->
-        </section><!--//cards-section-->
+<section class="hero is-info is-large mb-1">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        GeoJS
+      </h1>
+      <h2 class="subtitle">
+        Highly available REST/JSON/JSONP IP Geolocation lookup API
+        <div class="slack-button pt-1">
+          <a href="https://slack.com/oauth/authorize?&client_id=159217363895.234425956290&scope=commands"><img alt="Add to Slack" class="slack-icon" src="{{ "/img/add_to_slack.png" | relURL }}" srcset="{{ "/img/add_to_slack.png" | relURL }} 1x, {{ "/img/add_to_slack@2x.png" | relURL }} 2x" /></a>
+      </h2>
+    </div>
+  </div>
+</section>
+<div class="container">
+  <div class="columns is-centered is-gapless">
+    <div class="column is-8">
+      <div class="">
+        <section class="section content pb-0 px-1">
+          <h2 class="has-text-centered title">Packed full of features</h2>
+          <ul>
+            <li>HTTPS only</li>
+            <li>Multiple formats</li>
+            <li>Highly available and geo routed</li>
+            <li>IPv4 and IPv6</li>
+            <li>No rate limits (yet)</li>
+            <li>Cross-origin resource sharing (CORS)</li>
+          </ul>
+          <p>And most importantly, <a href="/docs/chatops/" title="GeoJS ChatOps integration">ChatOps integration</a>.
+            Lookup IPs from the comfort of chat.
+        </section>
+        <div class="py-1">
+          <div class="px-1 pb-2">
+            <h2 class="title has-text-centered">Getting started is easy!</h2>
+            <div class="content">
+              {{ .Content }}
+            </div>
+          </div>
+          <h2 class="title has-text-centered px-1">Documentation</h2>
+          <div class="columns is-multiline is-gapless">
+            {{ range (where .Paginator.Pages.ByWeight ".Params.homepage" "!=" "false" )}}
+            {{ partial "tile" . }}
+            {{ end }}
+          </div>
+        </div>
+        <div class="content pb-1 px-1">
+          <h2 class="has-text-centered">Sponsors</h2>
+          <p class="has-text-centered has-text-left-touch pb-0">
+            GeoJS is powered by the DigitalOcean cloud and wouldn't be possible without them. Use our <a href="https://m.do.co/c/2c9ab4daaa8d" title="DigitalOcean referral link">referral link</a> to get $10 free credit upon signup. We'd also like to thank <a href="https://www.dnsspy.io/?ref=geojs.io" title="DNS Spy website">DNS Spy</a> who continually monitor our DNS infrastructure to ensure that users can reach GeoJS.
+          </p>
+          <div class="columns is-vcentered">
+            <div class="column">
+              <figure class="image">
+                <a href="https://www.digitalocean.com" title="DigitalOcean">
+                  <img src="{{ "/img/DO_Logo_horizontal_blue.svg" | relURL }}" alt="DigitalOcean logo" class="sponsorlogo"></img>
+                </a>
+              </figure>
+            </div>
+            <div class="column">
+              <figure class="image">
+                <a href="https://www.dnsspy.io/?ref=geojs.io" title="DNS Spy">
+                  <img src="{{ "/img/dnsspy_logo.png" | relURL }}" alt="DNS Spy logo" class="sponsorlogo"></img>
+                </a>
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="content px-1">
+          <h2 class="has-text-centered">Notes & Acknowledgements</h2>
+          <p>I'd like to thank <a href="http://www.telize.com/" title="Telize">Telize</a> for inspiring me to
+            create this and MaxMind, as all GeoIP data is sourced from their GeoLite database, available at
+            maxmind.com.</p>
+          <p>GeoJS is made with <i class="fa fa-heart"></i> by <a href="https://jloh.co" title="James Loh">jloh</a>.
+            I can be foud online at <a href="https://jloh.co/l/blog" title="James' blog">my blog</a>, <a href="https://jloh.co/l/twitter"
+              title="James on Twitter">Twitter</a>, <a href="https://jloh.co/l/github" title="James on GitHub">GitHub</a>
+            and <a href="https://jloh.co/l/keybase" title="James on Keybase">Keybase</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {{ end }}

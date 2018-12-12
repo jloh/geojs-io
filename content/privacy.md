@@ -1,11 +1,7 @@
 ---
 title: Privacy Policy
-weight: 110
 homepage: false
 draft: false
-toc: false
-noindex: "true"
-icon: user-secret
 ---
 
 ## tl;dr

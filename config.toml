@@ -1,8 +1,7 @@
-baseurl = "https://geojs.io"
+baseurl = "https://www.geojs.io"
 languageCode = "en-AU"
 title = "GeoJS · REST/JSON/JSONP GeoIP API"
 metadataformat = "yaml"
-canonifyurls = true
 # Enable Google Analytics by entering your tracking id
 googleAnalytics = "UA-92272378-1"
 # Build a robots.txt
@@ -18,22 +17,23 @@ description = "GeoJS is a highly available REST/JSON/JSONP IP Geolocation lookup
 # Code higlighting settings
 pygmentsCodefences = true
 pygmentsCodeFencesGuesSsyntax = false
+pygmentsUseClasses=true
 
 [params]
-RSSLink = "/index.xml"
-author  = "jloh"
-github  = "jloh"
-twitter = "itsjloh"
-email   = "contact@geojs.io"
-repo    = "https://github.com/jloh/geojs-io"
+RSSLink     = "/index.xml"
+author      = "jloh"
+github      = "jloh"
+twitter     = "itsjloh"
+email       = "contact@geojs.io"
+repo        = "https://github.com/jloh/geojs-io"
+blog_domain = "https://jloh.ghost.io"
+blog_filter = "tag:geojs"
 
 [outputs]
 home = [ "HTML", "RSS", "REDIRECTS", "HEADERS" ]
 
 [mediaTypes]
 [mediaTypes."text/netlify"]
-suffix = ""
-delimiter = ""
 
 [outputFormats]
 [outputFormats.REDIRECTS]
@@ -46,3 +46,21 @@ mediatype = "text/netlify"
 baseName = "_headers"
 isPlainText = true
 notAlternative = true
+
+# Menu items that aren't in frontmatter
+[menu]
+
+  [[menu.main]]
+    name = "Blog"
+    url = "https://jloh.co/tag/geojs/"
+    weight = 200
+
+  [[menu.main]]
+    name = "App"
+    url = "https://app.geojs.io/"
+    weight = 250
+
+  [[menu.main]]
+    name = "Status"
+    url = "https://status.geojs.io/"
+    weight = 300

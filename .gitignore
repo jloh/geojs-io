@@ -78,3 +78,12 @@ typings/
 
 # dotenv environment variables file
 .env
+
+# Ignore files that're built automatically
+static/css
+static/js
+data/css.json
+data/js.json
+
+# Keep VSCode
+!.vscode
