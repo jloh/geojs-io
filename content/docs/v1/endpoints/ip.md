@@ -1,5 +1,5 @@
 ---
-description: "Returns the requesting IP in multiple formats."
+description: "Returns the requesting IP in multiple formats"
 title: IP
 draft: false
 weight: 500

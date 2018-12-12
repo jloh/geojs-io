@@ -1,5 +1,5 @@
 ---
-description: "Returns PTR (pointer record) information about an IP."
+description: "Returns PTR (pointer record) information about an IP"
 title: PTR
 draft: false
 features:

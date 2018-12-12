@@ -1,5 +1,5 @@
 ---
-description: "Contains all available geographical information about an IP."
+description: "Contains all available geographical information about an IP"
 title: Geo
 draft: false
 features:

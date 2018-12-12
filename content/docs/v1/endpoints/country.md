@@ -1,5 +1,5 @@
 ---
-description: "Returns the country information about an IP."
+description: "Returns the country information about an IP"
 title: Country
 draft: false
 features:
