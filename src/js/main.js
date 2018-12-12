@@ -93,3 +93,11 @@ function mailchimpCallback(data) {
   // Cleanup script
   document.getElementById("mc-callback").remove();
 }
+
+// Handle GeoJS response
+function geoip(json) {
+  var userip = document.getElementById("user_ip");
+  var countrycode = document.getElementById("user_countrycode");
+  userip.textContent = json.ip;
+  countrycode.textContent = json.country_code;
+}
