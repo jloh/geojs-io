@@ -36,10 +36,11 @@ document.getElementById('mc-embedded-subscribe-form').addEventListener('submit',
 });
 
 function errorMessage(error, parent) {
+  var errorMsg = error.includes(' - ') ? error.substring(3) : error;
   var dispayError = document.createElement('p');
   dispayError.setAttribute('id', 'mc-error-message');
   dispayError.setAttribute('class', 'help is-danger');
-  dispayError.innerHTML = error;
+  dispayError.innerHTML = errorMsg;
   document.getElementById(parent).appendChild(dispayError);
 }
 
