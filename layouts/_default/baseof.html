@@ -38,7 +38,7 @@
   {{ partial "nav/main" . }}
   {{ block "main" . }}
   {{ end }}
-  {{ partialCached "footer" . }}
+  {{ partial "footer" . }}
 
   <!-- Main Javascript -->
   <script src="{{ print "js/" ( index .Site.Data.js "main.js" ) | relURL }}"></script>
