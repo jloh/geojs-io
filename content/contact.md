@@ -18,7 +18,7 @@ I can be contacted at `contact @ geojs . io`, through the [public Gitter room](h
   </a>
 </div>
 
-<form class="pb-2" name="contact" action="/contact/thanks/" data-netlify="true">
+<form class="pb-2" name="contact" action="/contact/thanks/" data-netlify-recaptcha="true" data-netlify="true">
   <div class="field">
     <label class="label" for="name">Name</label>
     <div class="control">
@@ -38,7 +38,7 @@ I can be contacted at `contact @ geojs . io`, through the [public Gitter room](h
     </div>
   </div>
   <div class="field">
-    <div data-netlify-recaptcha="true"></div>
+    <div netlify-recaptcha></div>
   </div>
   <div class="field">
     <div class="field-label">
