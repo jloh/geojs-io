@@ -38,7 +38,7 @@ I can be contacted at `contact @ geojs . io`, through the [public Gitter room](h
     </div>
   </div>
   <div class="field">
-    <div netlify-recaptcha></div>
+    <div data-netlify-recaptcha="true"></div>
   </div>
   <div class="field">
     <div class="field-label">
