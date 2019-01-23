@@ -27,7 +27,7 @@ twitter     = "itsjloh"
 email       = "contact@geojs.io"
 repo        = "https://github.com/jloh/geojs-io"
 blog_domain = "https://jloh.ghost.io"
-blog_filter = "tag:geojs"
+blog_filter = "primary_tag:geojs"
 
 [outputs]
 home = [ "HTML", "RSS", "REDIRECTS", "HEADERS" ]
