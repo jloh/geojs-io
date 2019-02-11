@@ -43,8 +43,8 @@
   <!-- Main Javascript -->
   <script src="{{ print "js/" ( index .Site.Data.js "main.js" ) | relURL }}"></script>
   {{ if eq (getenv "HUGO_ENV") "PRODUCTION" }}
-  <script async src="https://cdn.simpleanalytics.io/hello.js"></script>
-  <noscript><img src="https://api.simpleanalytics.io/hello.gif" alt=""></noscript>
+  <script async src="https://sa.geojs.io/hello.js"></script>
+  <noscript><img src="https://sa.geojs.io/hello.gif" alt=""></noscript>
   {{ end }}
   {{ if .IsHome}}
   <script async src="https://get.geojs.io/v1/ip/geo.js"></script>
