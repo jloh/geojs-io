@@ -32,7 +32,7 @@ var paths = {
 
 gulp.task('sass', function () {
   del([paths.styles.dest + "*.css"])
-  return gulp.src('./src/sass/main.scss')
+  return gulp.src(['./src/sass/main.scss', './src/sass/c3.scss'])
     .pipe(sass({outputStyle: 'compressed'}))
     .pipe(sassUnicode())
     .pipe(hash())

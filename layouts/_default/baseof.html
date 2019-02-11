@@ -49,6 +49,11 @@
   {{ if .IsHome}}
   <script async src="https://get.geojs.io/v1/ip/geo.js"></script>
   {{ end }}
+  {{ if .Params.charts }}
+  <script src="{{ print "js/" ( index .Site.Data.js "moment.js" ) | relURL }}"></script>
+  <script src="{{ print "js/" ( index .Site.Data.js "chart.js" ) | relURL }}"></script>
+  <script src="{{ print "js/" ( index .Site.Data.js "traffic.js" ) | relURL }}"></script>
+  {{ end }}
 </body>
 
 </html>
