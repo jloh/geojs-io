@@ -8,7 +8,7 @@ menu:
     weight: 250
 ---
 
-I'm trying to be transparent about the ongoings on GeoJS. Below are some public metrics including website analytics and API traffic.
+I'm trying to be transparent about the ongoings of GeoJS. Below are some public metrics including website analytics and API traffic.
 
 ## Website Analytics
 
