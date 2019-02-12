@@ -2,6 +2,7 @@
 title: Open Stats
 homepage: false
 draft: false
+charts: true
 menu:
   main:
     name: Open
@@ -19,4 +20,6 @@ Website analytics are provided by the privacy first service [Simple Analytics](h
 
 ## API Traffic
 
-Stats coming soon!
+Below is the last 60 days of traffic for [get.geojs.io](https://get.geojs.io/)
+
+<canvas id="traffic-chart"></canvas>
