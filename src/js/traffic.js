@@ -17,30 +17,47 @@ function traffic_data(traffic_levels) {
                 text: "Last 60 days of traffic"
             },
             responsive: true,
-                scales:     {
-                    xAxes: [{
-                        type:       "time",
-                        time:       {
-                            parser: timeFormat,
-                            tooltipFormat: 'll'
-                        },
-                        scaleLabel: {
-                            display:     false,
-                            labelString: 'Date'
+            scales:{
+                xAxes: [{
+                    type: "time",
+                    time: {
+                        parser: timeFormat,
+                        tooltipFormat: 'll'
+                    },
+                    scaleLabel: {
+                        display: false,
+                        labelString: 'Date'
+                    }
+                }],
+                yAxes: [{
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Requests/day (in millions)'
+                    },
+                    ticks: {
+                        callback: function(label, index, labels) {
+                            return label/1000000+'m';
                         }
-                    }],
-                    yAxes: [{
-                        scaleLabel: {
-                            display:     true,
-                            labelString: 'Requests/day'
-                        }
-                    }]
-                },
-            "legend": {
-                "display": false
+                    }
+                }]
             },
-            "tooltips": {
-                "mode": "index", "backgroundColor": "#9AA7B4", "intersect": false, "cornerRadius": 3, "footerFontStyle": "normal", "titleSpacing": 0, "bodySpacing": 0, "footerSpacing": 0, "titleMarginBottom": 5, "footerMarginTop": 0, "yPadding": 5, "caretPadding": 10, "caretSize": 0
+            legend: {
+                display: false
+            },
+            tooltips: {
+                "mode": "index",
+                "backgroundColor": "#9AA7B4",
+                "intersect": false,
+                "cornerRadius": 3,
+                "footerFontStyle": "normal",
+                "titleSpacing": 0,
+                "bodySpacing": 0,
+                "footerSpacing": 0,
+                "titleMarginBottom": 5,
+                "footerMarginTop": 0,
+                "yPadding": 5,
+                "caretPadding": 10,
+                "caretSize": 0
             }
         }
     });
