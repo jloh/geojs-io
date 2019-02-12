@@ -163,7 +163,12 @@ function traffic_data(traffic_levels) {
                 "footerMarginTop": 0,
                 "yPadding": 5,
                 "caretPadding": 10,
-                "caretSize": 0
+                "caretSize": 0,
+                callbacks: {
+                    label: function(tooltipItem, data) {
+                        return tooltipItem.yLabel.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                    }
+                }
             }
         }
     });
