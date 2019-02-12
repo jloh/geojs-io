@@ -152,10 +152,8 @@ function traffic_data(traffic_levels) {
             },
             tooltips: {
                 "mode": "index",
-                "backgroundColor": "#9AA7B4",
                 "intersect": false,
                 "cornerRadius": 3,
-                "footerFontStyle": "normal",
                 "titleSpacing": 0,
                 "bodySpacing": 0,
                 "footerSpacing": 0,
@@ -164,9 +162,10 @@ function traffic_data(traffic_levels) {
                 "yPadding": 5,
                 "caretPadding": 10,
                 "caretSize": 0,
+                displayColors: false,
                 callbacks: {
                     label: function(tooltipItem, data) {
-                        return tooltipItem.yLabel.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                        return tooltipItem.yLabel.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + ' requests';
                     }
                 }
             }
