@@ -27,6 +27,6 @@ If you would like to show the result to the whole channel type `display` after t
 
 ## Support
 
-Should you run into any issues with the Slack app, you can reach out to my via the [contact page](/contact/) or via [Twitter](https://jloh.co/l/twitter).
+Should you run into any issues with the Slack app, you can reach out via the [contact page](/contact/) or [Twitter](https://jloh.pub/l/twitter).
 
 This information is also displayed using `/geojs help` inside Slack.
