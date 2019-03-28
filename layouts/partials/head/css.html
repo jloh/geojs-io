@@ -1,1 +1,3 @@
-<link rel="stylesheet" href="{{ print "css/" ( index .Site.Data.css "main.css" ) | relURL }}">
+{{- $options := (dict "targetPath" "css/main.css" "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "node_modules/bulma")) -}}
+{{- $style := resources.Get "sass/main.scss" | resources.ToCSS $options | resources.Fingerprint "sha512" -}}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}">

@@ -41,7 +41,8 @@
   {{ partialCached "footer" . }}
 
   <!-- Main Javascript -->
-  <script src="{{ print "js/" ( index .Site.Data.js "main.js" ) | relURL }}"></script>
+  {{- $main_js := resources.Get "js/main.js" | resources.Minify | resources.Fingerprint "sha512" -}}
+  <script src="{{ $main_js.RelPermalink }}"></script>
   {{ if eq (getenv "HUGO_ENV") "PRODUCTION" }}
   <script async src="https://sa.geojs.io/hello.js"></script>
   <noscript><img src="https://sa.geojs.io/hello.gif" alt=""></noscript>
@@ -50,8 +51,10 @@
   <script async src="https://get.geojs.io/v1/ip/geo.js"></script>
   {{ end }}
   {{ if .Params.charts }}
-  <script src="{{ print "js/" ( index .Site.Data.js "moment.js" ) | relURL }}"></script>
-  <script src="{{ print "js/" ( index .Site.Data.js "chart.js" ) | relURL }}"></script>
+  {{- $moment_js := resources.Get "js/moment.js" | resources.Minify | resources.Fingerprint "sha512" -}}
+  {{- $chart_js := resources.Get "js/chart.js" | resources.Minify | resources.Fingerprint "sha512" -}}
+  <script src="{{ $moment_js.RelPermalink }}"></script>
+  <script src="{{ $chart_js.RelPermalink }}"></script>
   <script src="https://traffic-stats.geojs.io/60_days.js"></script>
   {{ end }}
 </body>
