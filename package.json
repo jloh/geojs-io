@@ -4,18 +4,7 @@
   "description": "GeoJS Website",
   "main": "gulpfile.js",
   "dependencies": {
-    "bulma": "^0.7.2",
-    "del": "^3.0.0",
-    "gulp": "^3.9.1",
-    "gulp-clean-css": "^3.10.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-concat-css": "^2.3.0",
-    "gulp-hash": "^4.2.2",
-    "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-sass-unicode": "^1.0.1",
-    "gulp-uglify": "^3.0.1",
-    "terser": "^3.10.13"
+    "bulma": "^0.7.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -1,19 +1,23 @@
 [build]
 [build.environment]
   HUGO_VERSION = "0.54.0"
+  RUBY_VERSION = "2.6.2"
 
 [context.production]
-  command = "npx gulp && hugo --gc"
+  command = "hugo --gc"
 [context.production.environment]
   HUGO_VERSION = "0.54.0"
   HUGO_ENV     = "PRODUCTION"
+  RUBY_VERSION = "2.6.2"
 
 [context.deploy-preview]
-  command = "npx gulp && hugo -b $DEPLOY_PRIME_URL"
+  command = "hugo -b $DEPLOY_PRIME_URL"
 [context.deploy-preview.environment]
   HUGO_VERSION = "0.54.0"
+  RUBY_VERSION = "2.6.2"
 
 [context.branch-deploy]
-  command = "npx gulp && hugo -b $DEPLOY_PRIME_URL"
+  command = "hugo -b $DEPLOY_PRIME_URL"
 [context.branch-deploy.environment]
   HUGO_VERSION = "0.54.0"
+  RUBY_VERSION = "2.6.2"
