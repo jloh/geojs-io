@@ -1,19 +1,23 @@
 [build]
 [build.environment]
   HUGO_VERSION = "0.54.0"
+  RUBY_VERSION = "2.6.2"
 
 [context.production]
   command = "hugo --gc"
 [context.production.environment]
   HUGO_VERSION = "0.54.0"
   HUGO_ENV     = "PRODUCTION"
+  RUBY_VERSION = "2.6.2"
 
 [context.deploy-preview]
   command = "hugo -b $DEPLOY_PRIME_URL"
 [context.deploy-preview.environment]
   HUGO_VERSION = "0.54.0"
+  RUBY_VERSION = "2.6.2"
 
 [context.branch-deploy]
   command = "hugo -b $DEPLOY_PRIME_URL"
 [context.branch-deploy.environment]
   HUGO_VERSION = "0.54.0"
+  RUBY_VERSION = "2.6.2"
