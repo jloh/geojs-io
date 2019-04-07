@@ -1,25 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Get burger element and his data-target menu
+  const burger = document.querySelector('.navbar-burger');
+  const menu = document.getElementById(burger.dataset.target);
 
-  // Get all "navbar-burger" elements
-  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+  burger.addEventListener('click', () => {
+    // Toggle burger icon to cross
+    burger.classList.toggle('is-active');
+    // Toggle menu visibility on touch device
+    menu.classList.toggle('is-active');
+  });
 
-  // Check if there are any navbar burgers
-  if ($navbarBurgers.length > 0) {
+  menu.addEventListener('click', () => {
+    // Hide menu after tap on touch device
+    if (window.getComputedStyle(burger).display == 'block') {
+      burger.click();
+    }
+  }, true);
 
-    // Add a click event on each of them
-    $navbarBurgers.forEach(el => {
-      el.addEventListener('click', () => {
-
-        // Get the target from the "data-target" attribute
-        const target = el.dataset.target;
-        const $target = document.getElementById(target);
-
-        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-        el.classList.toggle('is-active');
-        $target.classList.toggle('is-active');
-      });
-    });
-  }
 });
 
 // Mailchimp form!
@@ -105,70 +102,76 @@ function geoip(json) {
 
 // Traffic function
 function traffic_data(traffic_levels) {
-    var ctx = document.getElementById("traffic-chart");
-    var timeFormat = 'DD/MM/YYYY';
-    var myChart = new Chart(ctx, {
-        type: 'line',
-        data: {
-            datasets: [{
-                data: traffic_levels,
-                borderWidth: 1,
-                borderColor: '#209cee',
-                backgroundColor: 'rgba(32,156,238,0.4)'
-            }]
-        },
-        options: {
-            title: {
-                display: false,
-                text: "Last 60 days of traffic"
-            },
-            responsive: true,
-            scales:{
-                xAxes: [{
-                    type: "time",
-                    time: {
-                        parser: timeFormat,
-                        tooltipFormat: 'll'
-                    },
-                    scaleLabel: {
-                        display: false,
-                        labelString: 'Date'
-                    }
-                }],
-                yAxes: [{
-                    scaleLabel: {
-                        display: true,
-                        labelString: 'Requests/day (in millions)'
-                    },
-                    ticks: {
-                        callback: function(label, index, labels) {
-                            return label/1000000+'m';
-                        }
-                    }
-                }]
-            },
-            legend: {
-                display: false
-            },
-            tooltips: {
-                "mode": "index",
-                "intersect": false,
-                "cornerRadius": 3,
-                "titleSpacing": 0,
-                "bodySpacing": 0,
-                "footerSpacing": 0,
-                "titleMarginBottom": 5,
-                "footerMarginTop": 0,
-                "yPadding": 5,
-                "caretPadding": 10,
-                "caretSize": 0,
-                displayColors: false,
-                callbacks: {
-                    label: function(tooltipItem, data) {
-                        return tooltipItem.yLabel.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + ' requests';
-                    }
-                }
+  var ctx = document.getElementById("traffic-chart");
+  var timeFormat = 'DD/MM/YYYY';
+  var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      datasets: [{
+        data: traffic_levels,
+        borderWidth: 1,
+        borderColor: '#209cee',
+        backgroundColor: 'rgba(32,156,238,0.4)'
+      }]
+    },
+    options: {
+      title: {
+        display: false,
+        text: "Last 60 days of traffic"
+      },
+      responsive: true,
+      scales: {
+        xAxes: [{
+          type: "time",
+          time: {
+            parser: timeFormat,
+            tooltipFormat: 'll'
+          },
+          scaleLabel: {
+            display: false,
+            labelString: 'Date'
+          },
+          gridLines: {
+            color: "#CCDCE666"
+          },
+        }],
+        yAxes: [{
+          scaleLabel: {
+            display: true,
+            labelString: 'Requests/day (in millions)'
+          },
+          gridLines: {
+            color: "#CCDCE666"
+          },
+          ticks: {
+            callback: function(label, index, labels) {
+              return label/1000000+'m';
             }
+          }
+        }]
+      },
+      legend: {
+        display: false
+      },
+      tooltips: {
+        "mode": "index",
+        "intersect": false,
+        "cornerRadius": 3,
+        "titleSpacing": 0,
+        "bodySpacing": 0,
+        "footerSpacing": 0,
+        "titleMarginBottom": 5,
+        "footerMarginTop": 0,
+        "yPadding": 5,
+        "caretPadding": 10,
+        "caretSize": 0,
+        displayColors: false,
+        callbacks: {
+          label: function(tooltipItem, data) {
+            return tooltipItem.yLabel.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + ' requests';
+          }
         }
-    });
+      }
+    }
+  });
 }

@@ -87,3 +87,6 @@ data/js.json
 
 # Keep VSCode
 !.vscode
+
+# Hugo generated resources
+resources/
