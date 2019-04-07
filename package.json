@@ -4,7 +4,8 @@
   "description": "GeoJS Website",
   "main": "gulpfile.js",
   "dependencies": {
-    "bulma": "^0.7.2"
+    "bulma": "^0.7.2",
+    "bulma-prefers-dark": "0.1.0-beta.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
