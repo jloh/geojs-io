@@ -8,7 +8,7 @@
   <!-- Meta -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  {{ .Hugo.Generator }}
+  {{ hugo.Generator }}
   <!-- Slack app -->
   <meta name="slack-app-id" content="A6WCHU48J">
   {{ partial "head/meta" . }}
@@ -43,7 +43,7 @@
   <!-- Main Javascript -->
   {{- $main_js := resources.Get "js/main.js" | resources.Minify | resources.Fingerprint "sha512" -}}
   <script src="{{ $main_js.RelPermalink }}"></script>
-  {{ if eq (getenv "HUGO_ENV") "PRODUCTION" }}
+  {{ if eq hugo.Environment "production" }}
   <script async src="https://sa.geojs.io/hello.js"></script>
   <noscript><img src="https://sa.geojs.io/hello.gif" alt=""></noscript>
   {{ end }}
