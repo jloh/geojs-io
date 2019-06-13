@@ -24,4 +24,4 @@ Last 30 days of traffic for [www.geojs.io](https://www.geojs.io).
 <div data-sa-graph-url="https://simpleanalytics.io/geojs.io/?color=209cee" data-sa-page-views-selector="#pageviews"></div>
 <script src="https://cdn.simpleanalytics.io/embed.js"></script>
 
-Website analytics are provided by the privacy first service [Simple Analytics](https://simpleanalytics.io/?ref=geojs.io).
+Website analytics are provided by the privacy first service [Simple Analytics](https://referral.simpleanalytics.com/james-loh).
