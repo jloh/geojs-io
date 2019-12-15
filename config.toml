@@ -19,6 +19,11 @@ pygmentsCodefences = true
 pygmentsCodeFencesGuesSsyntax = false
 pygmentsUseClasses=true
 
+# Enable raw HTML in render
+# Without this our charts and other HTML content don't display
+[markup.goldmark.renderer]
+unsafe = true
+
 [params]
 RSSLink     = "/index.xml"
 author      = "jloh"
