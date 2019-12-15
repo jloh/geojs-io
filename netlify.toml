@@ -1,6 +1,6 @@
 [build]
 [build.environment]
-  HUGO_VERSION = "0.55.6"
+  HUGO_VERSION = "0.61.0"
   RUBY_VERSION = "2.6.2"
 
 [context.production]
