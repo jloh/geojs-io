@@ -41,7 +41,7 @@ This endpoint contains geographical information about an IP, such as its latitud
 | ------------------- | ---- | ----------- | ------- |
 | `ip`                | String  | Requested IP                | `8.8.8.8`   |
 | `country`           | String  | Country name in English     | `Australia` |
-| `country_code`      | String  | Two letter country code     | `AU`        |
+| `country_code`      | String  | Two letter [country code](https://dev.maxmind.com/geoip/legacy/codes/iso3166/)     | `AU`        |
 | `country_code3`     | String  | Three letter country code   | `AUS`       |
 | `continent_code`    | String  | Three letter continent code | `OC`        |
 | `city`              | String  | City name in English        | `Mountain View` |

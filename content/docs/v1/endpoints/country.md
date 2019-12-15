@@ -40,7 +40,7 @@ This endpoint returns the country of the requesting IP. It has multiple plain te
 | Property    | Type    | Description               | Example         |
 | ------------| ------- | ------------------------- | --------------- |
 | `ip`        | String  | Requested IP              | `8.8.8.8`       |
-| `country`   | String  | Two letter country code   | `US`            |
+| `country`   | String  | Two letter [country code](https://dev.maxmind.com/geoip/legacy/codes/iso3166/) | `US`            |
 | `country_3` | String  | Three letter country code | `USA`           |
 | `name`      | String  | Country name in English   | `United States` |
 
