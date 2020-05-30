@@ -1,5 +1,2 @@
-{{- $blog_url := ( printf "%s/ghost/api/v2/content/posts/?%s" $.Site.Params.blog_domain ( querify "limit" 1 "filter" $.Site.Params.blog_filter "key" (getenv "GHOST_API_KEY" ) )) -}}
-{{- $blog_posts := getJSON $blog_url -}}
-{{- range first 1 $blog_posts.posts -}}
-<p class="navbar-text navbar-right">Latest news: <a href="{{ .url }}?ref=geojs.io">{{ .title }}</a></p>
-{{- end -}}
+{{- $latest_post := getJSON "https://jloh.co/tags/geojs/latest.json" -}}
+<p class="navbar-text navbar-right">Latest news: <a href="{{ $latest_post.url }}?ref=geojs.io" title="Latest post from the GeoJS blog">{{ $latest_post.title }}</a></p>
