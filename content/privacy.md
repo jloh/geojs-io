@@ -6,8 +6,8 @@ draft: false
 
 ## tl;dr
 
- 1. We store some visit information/log data for analytical/capacity planning purposes
- 1. Some log data is shared with third parties (Logz.io) for analytical purposes
+ 1. GeoJS stores anonymised error logs for error reporting/tracking but does _not_ store access logs
+ 1. GeoJS traffic flows through the Cloudflare network
  1. Should any data be shared with further third parties we will update this policy mentioning so
  1. If you have any queries at all, contact us at contact@geojs.io
 
@@ -27,14 +27,15 @@ This Privacy Policy is reviewed and revised from time to time. You will want to 
 
 ### 3. What Information will we collect?
  1. We only collect information that is necessary for us to carry out our functions or activities. This may include sensitive information.
- 1. Our servers automatically record information ("Log Data") created by your use of the Service. Log Data may include information such as your IP address, browser type, the referring domain, pages visited and device. Other actions, such as interactions with our website, applications and advertisements, may also be included in Log Data.
+ 1. Our servers automatically record information ("Log Data") created by your use of the Service in the event of an error. Log Data may include information such as your browser type, the referring domain and device. Other actions, such as interactions with our website, applications and advertisements, may also be included in Log Data.
  1. This Log Data may be aggregated for analytical and capacity planning purposes.
+ 1. GeoJS does not currently store access logs, only error logs outlined above.
  1. GeoJS does not currently use "cookie" technology, it is not included in our Log Data.
 
 ### 4. When do we disclose the information?
  1. We only disclose information where we need to in order to advance your interests, or when we are required by law to disclose it. Generally we will try to ensure that you are aware whenever information is being disclosed to a third party.
  1. We engage certain trusted third parties to perform functions and provide services to us. We may share your personal information with these third parties, but only to the extent necessary to perform these functions and provide such services, and only where these third parties have agreed to honour the protections of this privacy policy.
-  1. Some visit data is shared with logging platform Logz.io for analytical purposes
+    1. GeoJS makes use of the Cloudflare network, you can read their privacy policy [here](https://www.cloudflare.com/privacypolicy/ "Cloudflare privacy policy").
  1. GeoJS reserves the right to cooperate with any legal process and any law enforcement or other government inquiry related to your use of the Service. We may provide information relevant to a court subpoena or to a law enforcement or other government investigation. You acknowledge and agree that we may collect, transmit, store, disclose and analyse such information for these purposes.
  1. In the event that GeoJS is involved in a winding up, merger, acquisition, reorganization or sale of assets, your information may be sold or transferred as part of that transaction. The promises in this privacy policy will apply to your information as transferred to the new entity.
 
