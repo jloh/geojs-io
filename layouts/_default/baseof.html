@@ -55,7 +55,7 @@
   {{- $chart_js := resources.Get "js/chart.js" | resources.Minify | resources.Fingerprint "sha512" -}}
   <script src="{{ $moment_js.RelPermalink }}"></script>
   <script src="{{ $chart_js.RelPermalink }}"></script>
-  <script src="https://traffic-stats.geojs.io/60_days.js"></script>
+  <script src="https://w.geojs.io/traffic"></script>
   {{ end }}
 </body>
 
