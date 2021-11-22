@@ -21,7 +21,13 @@ Last 60 days of traffic for [get.geojs.io](https://get.geojs.io/).
 
 Last 30 days of traffic for [www.geojs.io](https://www.geojs.io).
 
-<div data-sa-graph-url="https://simpleanalytics.com/geojs.io/?color=209cee" data-sa-page-views-selector="#pageviews"></div>
-<script src="https://cdn.simpleanalytics.io/embed.js"></script>
+<div id="chart" data-hostname="geojs.io" style="aspect-ratio: 2/1">
+  <p style="margin: 0">Loading chart...</p>
+</div>
+<script
+  async
+  data-chart-selectors="#chart"
+  src="https://scripts.simpleanalyticscdn.com/embed.js"
+></script></br>
 
 Website analytics are provided by the privacy first service [Simple Analytics](https://referral.simpleanalytics.com/james-loh).
