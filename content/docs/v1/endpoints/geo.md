@@ -50,9 +50,9 @@ This endpoint contains geographical information about an IP, such as its latitud
 | `longitude`         | String  | IP longitude (Note: this is a string due to historic reasons)  | `-122.0775` |
 | `accuracy`          | Integer | Radius in kilometers around the specified location where the IP address is likely to be | `5` |
 | `timezone`          | String  | Time zone as specified by the [IANA Time Zone Database](http://www.iana.org/time-zones) | `America/Los_Angeles`|
-| `organization`      | String  | The organization that the IP is registered to (Note: `Unknown` is returned when this field is unknown) | `Google LLC` |
+| `organization_name` | String  | The organization that the IP is registered to (Note: `Unknown` is returned when this field is unknown) | `Google LLC` |
 | `asn`               | Integer | The [autonomous system number](http://en.wikipedia.org/wiki/Autonomous_system_(Internet)) associated with the IP address (Note: `64512` is returned when the ASN is unknown) | `15169` |
-| `organization_name` | String  | The ASN and organization field combined (Note: this field is depricated) | `AS15169 Google LLC` |
+| `organization`      | String  | The ASN and organization field combined (Note: this field is depricated) | `AS15169 Google LLC` |
 
 {{% /table %}}
 
