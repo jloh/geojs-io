@@ -18,8 +18,8 @@ This endpoint is unique since it doesn't return geographical information about a
 | Type  | URI |
 | ----- | --- |
 | Plain text | `https://get.geojs.io/v1/dns/ptr` <br> `https://get.geojs.io/v1/dns/ptr/{ip address}` |
-| JSON  | `https://get.geojs.io/v1/dns/ptr.json` <br> `https://get.geojs.io/v1/ip/geo/{ip address}.json` |
-| JSONP | `https://get.geojs.io/v1/dns/ptr.js` <br> `https://get.geojs.io/v1/ip/geo/{ip address}.js` |
+| JSON  | `https://get.geojs.io/v1/dns/ptr.json` <br> `https://get.geojs.io/v1/dns/ptr/{ip address}.json` |
+| JSONP | `https://get.geojs.io/v1/dns/ptr.js` <br> `https://get.geojs.io/v1/dns/ptr/{ip address}.js` |
 
 {{% /table %}}
 
