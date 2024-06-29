@@ -43,10 +43,6 @@
   <!-- Main Javascript -->
   {{- $main_js := resources.Get "js/main.js" | resources.Minify | resources.Fingerprint "sha512" -}}
   <script src="{{ $main_js.RelPermalink }}"></script>
-  {{ if eq hugo.Environment "production" }}
-  <script async src="https://sa.geojs.io/hello.js"></script>
-  <noscript><img src="https://sa.geojs.io/hello.gif" alt=""></noscript>
-  {{ end }}
   {{ if .IsHome}}
   <script async src="https://get.geojs.io/v1/ip/geo.js"></script>
   {{ end }}
