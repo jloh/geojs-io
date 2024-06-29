@@ -38,7 +38,7 @@
   {{ partial "nav/main" . }}
   {{ block "main" . }}
   {{ end }}
-  {{ partialCached "footer" . }}
+  {{ partial "footer" . }}
 
   <!-- Main Javascript -->
   {{- $main_js := resources.Get "js/main.js" | resources.Minify | resources.Fingerprint "sha512" -}}
