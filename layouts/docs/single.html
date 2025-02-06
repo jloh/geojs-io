@@ -29,6 +29,9 @@
       <div class="content px-1">
         {{ .Content }}
       </div>
+      <div class="content px-1">
+        <p>Last updated: {{ .Lastmod.Format "02/01/2006" }} {{ with .GitInfo }} (<a href="{{ $.Site.Params.repo }}/commit/{{ .Hash }}" title="{{ .Subject }}" taget="_blank">{{ substr .Hash 0 8}}</a>){{ end }}</p>
+      </div>
     </div>
   </div>
 </div>
